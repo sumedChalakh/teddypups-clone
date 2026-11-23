@@ -4,26 +4,28 @@
 - [x] **P1 Scaffold**:
   - Initialized Next.js 14 App Router project with TypeScript and ESLint.
   - Configured Tailwind CSS with full color tokens, fonts, and 8 scene gradient definitions.
-  - Setup next/font/google with Fraunces (display), Figtree (sans), and Shantell Sans (handwritten accents).
-  - Setup folder architecture: `src/app/(site)`, `src/components/{layout,home,puppies,ui}`, `src/data`, `src/config`, `src/lib`, `public/{brand,puppies,families,cursor}`.
-  - Created centralized `src/config/site.ts` with contact information and metadata.
-  - Created documentation (`docs/PROMPTS.md`, `docs/PROGRESS.md`, `docs/DECISIONS.md`, `README.md`).
-  - Added paw-print cursor SVG assets and favicon.
-  - Verified `npm run lint` and `npm run build` (both succeeded with 0 errors).
-  - Initialized Git repository and created first commit.
+  - Setup next/font/google with Fraunces, Figtree, and Shantell Sans.
+  - Created directory architecture, site config, and documentation files.
+  - Git repository initialized with first commit (`5703151`).
+- [x] **P2 Layout**:
+  - Built sticky `Navbar` with scroll-triggered backdrop blur and mobile drawer toggle.
+  - Built full-screen `MobileMenu` with animated drawer, paw accents, Esc key handling, and background scroll locking.
+  - Built `Footer` featuring top wavy hill SVG edge, brand story, quick links, breed collections, and Dubai showroom contacts.
+  - Built `FloatingWhatsApp` button with pulse animation and pre-filled inquiry.
+  - Built `MobileStickyBar` fixed at mobile viewport bottom with direct WhatsApp and Call actions.
+  - Integrated `SmoothScroll` with Lenis respecting `prefers-reduced-motion`.
+  - Built reusable `PawIcon` SVG component.
+  - Verified `npm run lint` and `npm run build` (0 warnings, 0 errors).
 
 ## In Progress
-- [ ] Waiting for user go-ahead ("next") to begin Phase P2.
+- [ ] Waiting for user go-ahead ("next") to begin Phase P3 (Data).
 
 ## Next
-- [ ] **P2 Layout**:
-  - Navbar with desktop links and mobile menu trigger.
-  - Full-screen animated mobile menu.
-  - Footer with contact details and quick links.
-  - Floating WhatsApp button.
-  - Mobile sticky WhatsApp + Call action bar.
-  - Lenis smooth scrolling integration.
-  - Interactive paw cursor with normal and pressed states.
+- [ ] **P3 Data**:
+  - Typed puppies data (`src/data/puppies.ts`) with 15 puppies (photos, breed, age, gender, origin, status, tags).
+  - Typed FAQ data (`src/data/faqs.ts`) with categories.
+  - Typed testimonials and adoption stories (`src/data/testimonials.ts`).
+  - Extract and optimize puppy and family media into `public/puppies/` and `public/families/`.
 
 ## Missing Assets
-- None currently (brand icon and paw cursor SVGs copied from reference). Puppy and family showcase photos will be organized in Phase 3 & 4.
+- None currently.

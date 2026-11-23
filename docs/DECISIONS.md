@@ -19,3 +19,19 @@
 - **Decision**: Stored phone numbers, WhatsApp links, default messages, email, showroom address, and main navigation links in a single configuration file.
 - **Why**: Ensures consistent contact information across navbar, footer, contact page, floating CTAs, and mobile action bars without hardcoded duplicates.
 - **Alternatives Considered**: Hardcoding numbers in individual components (error-prone when numbers or addresses update).
+
+
+## 5. Global Layout & Lenis Smooth Scrolling
+- **Decision**: Implemented `SmoothScroll` provider wrapping layout children with Lenis, paired with a `prefers-reduced-motion` media query guard.
+- **Why**: Delivers luxurious, buttery smooth inertial scrolling matching the premium aesthetic of the brand, while immediately degrading to native instant scrolling if users have reduced motion enabled for accessibility.
+- **Alternatives Considered**: Native CSS `scroll-behavior: smooth` (lacks inertia and velocity dampening).
+
+## 6. Dual CTA Strategy (Floating Button vs. Mobile Sticky Bar)
+- **Decision**: Displayed the `MobileStickyBar` exclusively on smaller screens (`md:hidden`) with high contrast WhatsApp & Call buttons, while keeping `FloatingWhatsApp` responsive and offset on desktop.
+- **Why**: Teacup puppy buyers in Dubai frequently browse on mobile devices and expect instant WhatsApp or phone connectivity without searching through headers or menus.
+- **Alternatives Considered**: A single floating button on mobile (often overlaps with mobile browser address bars and bottom navigation).
+
+## 7. Accessible Mobile Menu Drawer
+- **Decision**: Managed body scroll locks (`document.body.style.overflow = 'hidden'`) and `keydown` Escape listeners inside `MobileMenu.tsx` with proper ARIA attributes (`role="dialog"`, `aria-modal="true"`).
+- **Why**: Prevents background content scrolling underneath the menu, supports keyboard navigation, and provides an effortless escape path for accessibility compliance.
+- **Alternatives Considered**: Simple checkbox hack or CSS-only drawer (poor accessibility and no keyboard escape support).

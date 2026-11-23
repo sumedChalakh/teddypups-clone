@@ -97,3 +97,14 @@ Start with P1 only. Do not begin P2 until I say "next".
   Scaffolded the Next.js App Router application with TypeScript and Tailwind CSS.
   Configured design tokens, 8 scene gradients, Google fonts (Fraunces, Figtree, Shantell Sans), folder structure, cursor assets, and site configuration.
   Initialized git tracking and documentation files according to project guidelines.
+
+
+## Phase 2: Layout
+- **Date/Time**: 2026-11-23T23:02:01+05:30
+- **User Prompt (Verbatim)**:
+```
+next
+```
+- **Summary**:
+  Built the responsive Navbar with scroll detection, full-screen accessible MobileMenu with paw accents, and rich Footer with wavy hill SVG and Dubai showroom contacts.
+  Added FloatingWhatsApp action button, mobile-only sticky action bar (WhatsApp & Call), and Lenis smooth scrolling with reduced-motion support.

@@ -2,6 +2,11 @@ import type { Metadata, Viewport } from 'next';
 import { Fraunces, Figtree, Shantell_Sans } from 'next/font/google';
 import './globals.css';
 import { siteConfig } from '@/config/site';
+import { Navbar } from '@/components/layout/Navbar';
+import { Footer } from '@/components/layout/Footer';
+import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
+import { MobileStickyBar } from '@/components/layout/MobileStickyBar';
+import { SmoothScroll } from '@/components/layout/SmoothScroll';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -57,8 +62,14 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${figtree.variable} ${shantellSans.variable}`}
     >
-      <body className="bg-brand-cream text-brand-dark antialiased">
-        {children}
+      <body className="bg-brand-cream text-brand-dark antialiased flex flex-col min-h-screen">
+        <SmoothScroll>
+          <Navbar />
+          <div className="flex-1 pt-16 sm:pt-20">{children}</div>
+          <Footer />
+          <FloatingWhatsApp />
+          <MobileStickyBar />
+        </SmoothScroll>
       </body>
     </html>
   );
