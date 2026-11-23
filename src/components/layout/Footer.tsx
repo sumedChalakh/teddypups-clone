@@ -1,165 +1,172 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock, ShieldCheck, Heart } from 'lucide-react';
 import { siteConfig } from '@/config/site';
-import { PawIcon } from '@/components/ui/PawIcon';
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <footer className="relative bg-[#24130b] text-brand-cream/90 pt-8 pb-28 md:pb-12 transition-colors">
-      {/* Decorative Wavy Hill Wave Edge */}
-      <div className="absolute -top-10 inset-x-0 overflow-hidden leading-none z-10 pointer-events-none">
+    <footer className="relative bg-[#24130b] text-teddy-cream overflow-hidden">
+      {/* Curved Hill Top Divider */}
+      <div className="w-full overflow-hidden leading-none" aria-hidden="true">
         <svg
-          viewBox="0 0 1440 80"
+          viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          className="w-full h-10 text-[#24130b] fill-current block"
-          aria-hidden="true"
+          className="relative block w-full h-12 text-[#24130b] fill-current"
         >
-          <path d="M0 80V44c120-30 240-44 360-30s240 46 360 34 240-58 360-46 240 40 360 26v52z" />
+          <path d="M0,0 C150,90 350,-40 500,45 C650,130 900,10 1200,60 L1200,120 L0,120 Z" />
         </svg>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 pb-12 border-b border-brand-cream/10">
-          {/* Brand Column */}
-          <div className="space-y-4">
-            <Link href="/" className="inline-flex items-center gap-2.5">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden bg-brand-sand/20 border border-brand-gold/40 flex items-center justify-center">
+      <div className="max-w-6xl mx-auto px-4 py-12 sm:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12 items-start">
+          {/* Brand Col with Cozy Basket Mascot from recording */}
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="relative w-20 h-20 flex-shrink-0">
                 <Image
-                  src="/brand/icon.png"
-                  alt="TeddyPups Logo"
-                  width={40}
-                  height={40}
-                  className="object-cover"
+                  src="/brand/real/mascot-basket.png"
+                  alt="TeddyPups Mascot in Basket"
+                  fill
+                  className="object-contain"
                 />
               </div>
-              <span className="font-display text-2xl font-bold tracking-tight text-white flex items-center gap-1.5">
-                TeddyPups
-                <PawIcon className="w-4 h-4 text-brand-gold" />
-              </span>
-            </Link>
-            <p className="text-sm text-brand-cream/70 leading-relaxed font-sans">
-              Dubai&apos;s premier boutique for ethically raised, certified teacup and toy puppies. Hand-delivered with love across the United Arab Emirates.
+              <div>
+                <h3 className="font-display font-black text-3xl text-teddy-cream">
+                  Home, at last.
+                </h3>
+                <span className="font-hand text-sm text-teddy-gold">
+                  {siteConfig.tagline}
+                </span>
+              </div>
+            </div>
+
+            <p className="font-sans text-sm text-teddy-cream/70 max-w-md leading-relaxed mb-6">
+              {siteConfig.description}
             </p>
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-cream/5 border border-brand-cream/10 text-xs text-brand-gold font-medium">
-              <ShieldCheck className="w-4 h-4 text-brand-gold" />
-              <span>100% Health Guarantee</span>
+
+            <div className="flex flex-wrap gap-2 text-xs">
+              <span className="px-3 py-1 rounded-full bg-white/10 text-teddy-sand">
+                Downtown Dubai showroom
+              </span>
+              <span className="px-3 py-1 rounded-full bg-white/10 text-teddy-sand">
+                Safe UAE & worldwide delivery
+              </span>
             </div>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display text-base font-semibold text-white tracking-wide uppercase mb-4">
+            <h4 className="font-display font-bold text-sm tracking-wider uppercase text-teddy-gold mb-4">
               Explore
-            </h3>
-            <ul className="space-y-2.5 text-sm">
-              {siteConfig.navLinks.map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-brand-cream/70 hover:text-brand-gold transition-colors inline-flex items-center gap-1.5 group"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-amber/40 group-hover:bg-brand-gold transition-colors" />
-                    <span>{link.label}</span>
-                  </Link>
-                </li>
-              ))}
+            </h4>
+            <ul className="space-y-2.5 font-sans text-sm text-teddy-cream/75">
+              <li>
+                <Link href="/puppies" className="hover:text-teddy-gold transition-colors">
+                  Available puppies
+                </Link>
+              </li>
+              <li>
+                <Link href="/gone-home" className="hover:text-teddy-gold transition-colors">
+                  Gone home
+                </Link>
+              </li>
+              <li>
+                <Link href="/happy-families" className="hover:text-teddy-gold transition-colors">
+                  Happy families
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-it-works" className="hover:text-teddy-gold transition-colors">
+                  How it works
+                </Link>
+              </li>
+              <li>
+                <Link href="/how-it-works#delivery" className="hover:text-teddy-gold transition-colors">
+                  Delivery & collection
+                </Link>
+              </li>
+              <li>
+                <Link href="/faq" className="hover:text-teddy-gold transition-colors">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-teddy-gold transition-colors">
+                  Visit & contact
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Breeds Collection */}
+          {/* Contact Details from siteConfig */}
           <div>
-            <h3 className="font-display text-base font-semibold text-white tracking-wide uppercase mb-4">
-              Our Breeds
-            </h3>
-            <ul className="space-y-2.5 text-sm text-brand-cream/70">
-              <li>
-                <Link
-                  href="/puppies?breed=maltipoo"
-                  className="hover:text-brand-gold transition-colors"
+            <h4 className="font-display font-bold text-sm tracking-wider uppercase text-teddy-gold mb-4">
+              Say hello
+            </h4>
+            <div className="space-y-3 font-sans text-sm text-teddy-cream/75">
+              <p>
+                <span className="block text-xs uppercase tracking-wider text-teddy-gold/70">
+                  WhatsApp
+                </span>
+                <a
+                  href={siteConfig.whatsappUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-teddy-gold transition-colors font-semibold"
                 >
-                  Teacup Maltipoo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/puppies?breed=pomeranian"
-                  className="hover:text-brand-gold transition-colors"
+                  {siteConfig.phone}
+                </a>
+              </p>
+              <p>
+                <span className="block text-xs uppercase tracking-wider text-teddy-gold/70">
+                  Email
+                </span>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="hover:text-teddy-gold transition-colors"
                 >
-                  Micro Pomeranian
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/puppies?breed=poodle"
-                  className="hover:text-brand-gold transition-colors"
-                >
-                  Tiny Toy Poodle
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/puppies?breed=cavapoo"
-                  className="hover:text-brand-gold transition-colors"
-                >
-                  Teddy Cavapoo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/puppies?breed=shih-tzu"
-                  className="hover:text-brand-gold transition-colors"
-                >
-                  Imperial Shih Tzu
-                </Link>
-              </li>
-            </ul>
-          </div>
+                  {siteConfig.email}
+                </a>
+              </p>
+              <p>
+                <span className="block text-xs uppercase tracking-wider text-teddy-gold/70">
+                  Showroom
+                </span>
+                <span>{siteConfig.address}</span>
+              </p>
+            </div>
 
-          {/* Visit & Contact */}
-          <div className="space-y-3">
-            <h3 className="font-display text-base font-semibold text-white tracking-wide uppercase mb-4">
-              Dubai Showroom
-            </h3>
-            <p className="flex items-start gap-2.5 text-sm text-brand-cream/70">
-              <MapPin className="w-4 h-4 text-brand-gold shrink-0 mt-0.5" />
-              <span>{siteConfig.address}</span>
-            </p>
-            <p className="flex items-center gap-2.5 text-sm text-brand-cream/70">
-              <Phone className="w-4 h-4 text-brand-gold shrink-0" />
+            <div className="mt-6 flex items-center gap-2">
               <a
-                href={`tel:${siteConfig.phone.replace(/\s+/g, '')}`}
-                className="hover:text-brand-gold transition-colors"
+                href={siteConfig.socials.instagram}
+                className="px-3 py-1 rounded-full border border-white/20 text-xs text-teddy-cream/80 hover:bg-white/10"
               >
-                {siteConfig.phone}
+                Instagram
               </a>
-            </p>
-            <p className="flex items-center gap-2.5 text-sm text-brand-cream/70">
-              <Mail className="w-4 h-4 text-brand-gold shrink-0" />
               <a
-                href={`mailto:${siteConfig.email}`}
-                className="hover:text-brand-gold transition-colors"
+                href={siteConfig.socials.tiktok}
+                className="px-3 py-1 rounded-full border border-white/20 text-xs text-teddy-cream/80 hover:bg-white/10"
               >
-                {siteConfig.email}
+                TikTok
               </a>
-            </p>
-            <p className="flex items-center gap-2.5 text-sm text-brand-cream/70">
-              <Clock className="w-4 h-4 text-brand-gold shrink-0" />
-              <span>{siteConfig.openingHours}</span>
-            </p>
+              <a
+                href={siteConfig.socials.facebook}
+                className="px-3 py-1 rounded-full border border-white/20 text-xs text-teddy-cream/80 hover:bg-white/10"
+              >
+                Facebook
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-brand-cream/50 gap-4">
-          <p>
-            &copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
-          </p>
-          <p className="flex items-center gap-1">
-            <span>Crafted with</span>
-            <Heart className="w-3.5 h-3.5 text-brand-rose fill-brand-rose" />
-            <span>for puppy lovers across UAE</span>
-          </p>
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-teddy-cream/50">
+          <p>© {currentYear} TeddyPups U.A.E. All rights reserved.</p>
+          <div className="flex items-center gap-2 font-hand text-sm text-teddy-gold/80">
+            <span>🐾</span>
+            <span>every puppy is family</span>
+          </div>
         </div>
       </div>
     </footer>

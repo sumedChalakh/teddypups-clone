@@ -1,172 +1,165 @@
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircle, HeartHandshake, Stethoscope, Home, Send, CheckCheck } from 'lucide-react';
+import Image from 'next/image';
 import { siteConfig } from '@/config/site';
-import { QuiltDivider } from './QuiltDivider';
+
+const breeds = [
+  { name: 'Maltipoo', filter: 'maltipoo' },
+  { name: 'Pomeranian', filter: 'pomeranian' },
+  { name: 'Poodle', filter: 'poodle' },
+  { name: 'Cavapoo', filter: 'cavapoo' },
+  { name: 'Shih Tzu', filter: 'shih-tzu' },
+];
 
 export function JourneyScene() {
-  const steps = [
-    {
-      num: '01',
-      title: 'Choose your puppy',
-      desc: 'Browse our available showroom puppies in Downtown Dubai or consult our team to match your ideal teacup breed from Korea.',
-      icon: HeartHandshake,
-    },
-    {
-      num: '02',
-      title: 'Health check & travel',
-      desc: 'Every puppy undergoes a comprehensive veterinary exam, core vaccinations, microchip registration, and flight clearance.',
-      icon: Stethoscope,
-    },
-    {
-      num: '03',
-      title: 'Hand-delivered to your home',
-      desc: 'We personally deliver your puppy right to your doorstep anywhere in the UAE, complete with luxury starter essentials.',
-      icon: Home,
-    },
-  ];
-
-  const quickBreeds = [
-    { name: 'Maltipoo', query: 'maltipoo' },
-    { name: 'Pomeranian', query: 'pomeranian' },
-    { name: 'Toy Poodle', query: 'poodle' },
-    { name: 'Cavapoo', query: 'cavapoo' },
-    { name: 'Shih Tzu', query: 'shih-tzu' },
-  ];
+  const [selectedBreed, setSelectedBreed] = useState('Maltipoo');
 
   return (
-    <section
-      data-section="journey"
-      className="relative min-h-[90vh] bg-gradient-to-b from-[#f7d18d] to-[#f0b866] pt-14 pb-16 flex flex-col justify-between"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-cream/80 border border-brand-dark/10 text-xs font-bold text-brand-rust uppercase tracking-wider mb-3">
-            <span>The TeddyPups Experience</span>
+    <section className="relative py-16 sm:py-24 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column: Numbered 3-Step Journey */}
+          <div>
+            <span className="font-hand text-lg sm:text-xl text-teddy-rust">step-by-step care</span>
+            <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-teddy-brown leading-tight mt-1 mb-4">
+              Your puppy journey
+            </h2>
+            <p className="font-sans text-base sm:text-lg text-teddy-brown/80 leading-relaxed mb-8">
+              A premium, step-by-step concierge experience. We make adoption simple, secure, and purely joyful.
+            </p>
+
+            <ol className="space-y-6">
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-teddy-rust text-teddy-cream font-bold flex items-center justify-center font-display text-lg shadow">
+                  1
+                </span>
+                <div>
+                  <h3 className="font-display font-bold text-xl text-teddy-brown">
+                    Choose your breed
+                  </h3>
+                  <p className="font-sans text-sm sm:text-base text-teddy-brown/75 mt-1">
+                    Select your preferred breed or tell us what you are looking for. We will guide you based on availability and your lifestyle.
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-teddy-rust/90 text-teddy-cream font-bold flex items-center justify-center font-display text-lg shadow">
+                  2
+                </span>
+                <div>
+                  <h3 className="font-display font-bold text-xl text-teddy-brown">
+                    Get photos & details
+                  </h3>
+                  <p className="font-sans text-sm sm:text-base text-teddy-brown/75 mt-1">
+                    Our team will share real photos, health details, and all necessary information directly on WhatsApp.
+                  </p>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4">
+                <span className="flex-shrink-0 w-10 h-10 rounded-full bg-teddy-rust/80 text-teddy-cream font-bold flex items-center justify-center font-display text-lg shadow">
+                  3
+                </span>
+                <div>
+                  <h3 className="font-display font-bold text-xl text-teddy-brown">
+                    Meet & welcome home
+                  </h3>
+                  <p className="font-sans text-sm sm:text-base text-teddy-brown/75 mt-1">
+                    Meet your pup at our showroom or receive safe VIP doorstep delivery across all 7 UAE Emirates.
+                  </p>
+                </div>
+              </li>
+            </ol>
           </div>
 
-          <h2 className="font-display text-3xl sm:text-5xl font-bold text-brand-dark tracking-tight">
-            Your puppy journey
-          </h2>
-
-          <p className="mt-4 text-base sm:text-lg text-brand-dark/80 font-sans">
-            A premium, step-by-step concierge experience. We make adoption simple, secure, and purely joyful.
-          </p>
-        </div>
-
-        {/* 3 Step Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          {steps.map((s) => {
-            const Icon = s.icon;
-            return (
-              <div
-                key={s.num}
-                className="relative bg-brand-cream/90 rounded-3xl p-7 border border-brand-dark/10 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between"
-              >
-                <div>
-                  <div className="flex items-center justify-between mb-5">
-                    <span className="font-display text-4xl font-extrabold text-brand-gold/60">
-                      {s.num}
+          {/* Right Column: Authentic WhatsApp Phone Mockup from Video */}
+          <div className="relative flex flex-col items-center">
+            <div className="relative w-full max-w-sm bg-teddy-brown rounded-[40px] p-3 shadow-2xl border-4 border-teddy-brown">
+              {/* Phone Screen Container */}
+              <div className="bg-[#fff9ee] rounded-[32px] overflow-hidden flex flex-col h-[520px]">
+                {/* Chat Header */}
+                <div className="bg-teddy-cream border-b border-teddy-sand px-4 py-3 flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-teddy-gold/40 border border-teddy-brown/20 flex items-center justify-center text-lg">
+                    🐾
+                  </div>
+                  <div>
+                    <h4 className="font-display font-bold text-sm text-teddy-brown leading-tight">
+                      TeddyPups U.A.E.
+                    </h4>
+                    <span className="text-[11px] text-green-700 font-medium flex items-center gap-1">
+                      <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                      online
                     </span>
-                    <div className="w-12 h-12 rounded-2xl bg-brand-sand flex items-center justify-center text-brand-rust">
-                      <Icon className="w-6 h-6" />
+                  </div>
+                </div>
+
+                {/* Chat Messages Body with Paw Wallpaper Pattern */}
+                <div className="flex-1 p-4 overflow-y-auto space-y-3 bg-[#fdf6e7]">
+                  {/* Incoming greeting bubble */}
+                  <div className="bg-[#f0c27b]/40 border border-teddy-amber/30 text-teddy-brown rounded-2xl rounded-tl-sm p-3 max-w-[85%] text-xs leading-relaxed shadow-sm">
+                    Hi TeddyPups! I’d love to know more about your available puppies.
+                  </div>
+
+                  {/* Incoming interactive guide bubble */}
+                  <div className="bg-white border border-teddy-sand text-teddy-brown rounded-2xl rounded-tl-sm p-3 max-w-[95%] text-xs leading-relaxed shadow-sm">
+                    <p className="font-semibold mb-2">
+                      Select your preferred breed or tell us what you’re looking for. We’ll guide you based on availability:
+                    </p>
+                    <div className="flex flex-wrap gap-1.5 mt-2">
+                      {breeds.map((b) => (
+                        <button
+                          key={b.name}
+                          type="button"
+                          onClick={() => setSelectedBreed(b.name)}
+                          className={`px-2.5 py-1 rounded-full text-[11px] font-medium border transition-colors ${
+                            selectedBreed === b.name
+                              ? 'bg-teddy-rust text-teddy-cream border-teddy-rust shadow-sm'
+                              : 'bg-teddy-cream text-teddy-brown border-teddy-brown/20 hover:bg-teddy-sand'
+                          }`}
+                        >
+                          {b.name}
+                        </button>
+                      ))}
                     </div>
                   </div>
 
-                  <h3 className="font-display font-bold text-xl text-brand-dark">
-                    {s.title}
-                  </h3>
-
-                  <p className="mt-3 text-sm text-brand-dark/75 leading-relaxed font-sans">
-                    {s.desc}
-                  </p>
+                  {/* Outgoing selection bubble */}
+                  <div className="self-end ml-auto bg-[#e2f7cb] border border-[#c4e89e] text-teddy-brown rounded-2xl rounded-tr-sm p-3 max-w-[80%] text-xs leading-relaxed shadow-sm">
+                    I am interested in a {selectedBreed}! Can you send recent photos and prices?
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
 
-        {/* WhatsApp-Style Chat Interactive Preview */}
-        <div className="mt-14 max-w-2xl mx-auto bg-brand-cream rounded-3xl border-2 border-brand-dark/10 shadow-lg overflow-hidden">
-          {/* Chat Window Header */}
-          <div className="bg-[#075E54] text-white px-5 py-3.5 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full bg-brand-sand flex items-center justify-center text-brand-dark font-bold font-display text-base border border-white/20">
-                TP
-              </div>
-              <div>
-                <p className="font-semibold text-sm leading-tight">TeddyPups Concierge</p>
-                <p className="text-[11px] text-white/80">Online &bull; Instant Response in Dubai</p>
-              </div>
-            </div>
-            <MessageCircle className="w-5 h-5 text-white/80" />
-          </div>
-
-          {/* Chat Messages Body */}
-          <div className="p-5 space-y-3 bg-[#E5DDD5]/40 text-xs sm:text-sm font-sans">
-            {/* Incoming message */}
-            <div className="flex justify-start">
-              <div className="bg-white rounded-2xl rounded-tl-xs p-3.5 shadow-xs max-w-[85%] text-brand-dark">
-                <p className="leading-relaxed">
-                  Hello! Welcome to TeddyPups UAE 🐾 Are you looking to meet available puppies in our Downtown showroom, or inquiring about an imported Korean teacup?
-                </p>
-                <div className="flex items-center justify-end gap-1 text-[10px] text-brand-dark/50 mt-1">
-                  <span>10:42 AM</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Outgoing user response mock */}
-            <div className="flex justify-end">
-              <div className="bg-[#DCF8C6] rounded-2xl rounded-tr-xs p-3.5 shadow-xs max-w-[85%] text-brand-dark">
-                <p className="leading-relaxed">
-                  Hi! I would love to see small teacup puppies with hypoallergenic coats. What breeds do you have ready?
-                </p>
-                <div className="flex items-center justify-end gap-1 text-[10px] text-brand-dark/50 mt-1">
-                  <span>10:43 AM</span>
-                  <CheckCheck className="w-3.5 h-3.5 text-[#34B7F1]" />
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Breed Filter Links in Chat */}
-            <div className="pt-2">
-              <p className="text-[11px] font-bold text-brand-dark/60 uppercase tracking-wider mb-2">
-                Tap to explore available breeds:
-              </p>
-              <div className="flex flex-wrap gap-1.5">
-                {quickBreeds.map((b) => (
-                  <Link
-                    key={b.name}
-                    href={`/puppies?breed=${b.query}`}
-                    className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white border border-brand-dark/15 text-xs font-semibold text-brand-dark hover:bg-brand-rust hover:text-white transition-colors shadow-2xs"
+                {/* Chat Input Bar with CTA */}
+                <div className="p-3 bg-white border-t border-teddy-sand flex items-center gap-2">
+                  <a
+                    href={siteConfig.whatsappUrl(`Hi TeddyPups, I am interested in ${selectedBreed} puppies.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-between px-4 py-2.5 rounded-full bg-teddy-cream border border-teddy-brown/20 hover:border-teddy-rust text-teddy-brown text-xs font-medium transition-colors"
                   >
-                    <span>{b.name}</span>
-                  </Link>
-                ))}
+                    <span>Say hello on WhatsApp</span>
+                    <span className="w-6 h-6 rounded-full bg-teddy-whatsapp text-white flex items-center justify-center text-xs font-bold">
+                      ➔
+                    </span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Chat Action Footer */}
-          <div className="p-3 bg-white border-t border-brand-dark/10 flex items-center gap-2">
-            <a
-              href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-                siteConfig.whatsappMessage
-              )}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-[#25D366] text-white font-semibold text-xs sm:text-sm hover:brightness-105 transition"
-            >
-              <Send className="w-4 h-4" />
-              <span>Start live chat with our puppy concierge</span>
-            </a>
+            {/* Standing Mascot beside phone */}
+            <div className="absolute -bottom-4 -left-6 sm:-left-10 w-24 h-20">
+              <Image
+                src="/brand/real/mascot-standing.png"
+                alt="TeddyPups Mascot"
+                fill
+                className="object-contain"
+              />
+            </div>
           </div>
         </div>
-      </div>
-
-      {/* Quilt transition to Scene 5 */}
-      <div className="relative z-30 pt-10">
-        <QuiltDivider fillColor="#f0b866" />
       </div>
     </section>
   );

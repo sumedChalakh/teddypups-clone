@@ -1,129 +1,98 @@
 import Link from 'next/link';
-import { Store, Plane, CheckCircle2, ArrowRight } from 'lucide-react';
-import { PawIcon } from '@/components/ui/PawIcon';
-import { QuiltDivider } from './QuiltDivider';
+import Image from 'next/image';
 
 export function PathsScene() {
   return (
-    <section
-      data-section="paths"
-      className="relative min-h-[85vh] bg-gradient-to-b from-[#fbe3b4] to-[#f7d18d] pt-14 pb-16 flex flex-col justify-between"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-cream/80 border border-brand-dark/10 text-xs font-bold text-brand-rust uppercase tracking-wider mb-3">
-            <PawIcon className="w-3.5 h-3.5" />
-            <span>Adoption Options</span>
-          </div>
+    <section className="relative py-16 sm:py-24 overflow-hidden">
+      <div className="max-w-6xl mx-auto px-4">
+        {/* Central Signpost Concept Matching Video Recording */}
+        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Vertical wooden post down center for large screens */}
+          <div
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-4 bg-[#7a3e20] -translate-x-1/2 rounded shadow-inner z-0"
+            aria-hidden="true"
+          />
 
-          <h2 className="font-display text-3xl sm:text-5xl font-bold text-brand-dark tracking-tight">
-            Two ways to meet your puppy
-          </h2>
-
-          <p className="mt-4 text-base sm:text-lg text-brand-dark/80 font-sans">
-            Choose the adoption journey that suits your family best: visit us locally in Downtown Dubai or reserve an exclusive Korean champion teacup.
-          </p>
-        </div>
-
-        {/* 2 Path Comparison Cards */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Path 1: Dubai Showroom */}
-          <div className="bg-brand-cream/90 backdrop-blur-xs rounded-3xl p-8 border-2 border-brand-dark/10 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
-            <div>
-              <div className="w-14 h-14 rounded-2xl bg-brand-sand flex items-center justify-center text-brand-rust mb-6 border border-brand-dark/10 group-hover:scale-110 transition-transform">
-                <Store className="w-7 h-7" />
-              </div>
-
-              <span className="text-xs uppercase font-bold tracking-widest text-brand-rust">
-                Local Availability
-              </span>
-
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-brand-dark mt-1">
-                Dubai Showroom
-              </h3>
-
-              <p className="mt-3 text-sm sm:text-base text-brand-dark/80 leading-relaxed font-sans">
-                See them, love them, take them home. Come meet our locally available puppies in our private Downtown Dubai showroom and spend time bonding before you decide.
-              </p>
-
-              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-brand-dark/85">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-rust shrink-0" />
-                  <span>Private sanitized playpens in Downtown Dubai</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-rust shrink-0" />
-                  <span>Same-day adoption & take-home paperwork</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-rust shrink-0" />
-                  <span>Live veterinary health check on-site</span>
-                </li>
-              </ul>
+          {/* Left Branch: Puppies in Dubai */}
+          <div className="relative z-10 bg-teddy-cream/90 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border-2 border-teddy-brown/20 shadow-xl flex flex-col justify-between">
+            {/* Wooden directional arrow */}
+            <div className="inline-block bg-[#a24a1a] text-teddy-cream px-6 py-2.5 rounded-l-full font-display font-bold text-lg sm:text-xl shadow mb-6 self-start">
+              Puppies in Dubai ➔
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-dark/10">
+            <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-teddy-brown/20 bg-teddy-sand/30 mb-6">
+              <Image
+                src="/brand/real/showroom-window.png"
+                alt="Dubai Showroom Puppy"
+                fill
+                className="object-contain"
+              />
+            </div>
+
+            <div>
+              <h3 className="font-display font-bold text-2xl text-teddy-brown mb-2">
+                In our Dubai showroom
+              </h3>
+              <p className="font-sans text-sm sm:text-base text-teddy-brown/80 leading-relaxed mb-6">
+                See them, love them, take them home. Come meet our locally available puppies in our Downtown Dubai showroom before you decide.
+              </p>
               <Link
                 href="/puppies?origin=local"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-brand-rust text-white font-semibold text-sm shadow-xs hover:bg-brand-rustDark transition"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-teddy-rust hover:bg-teddy-rust-deep text-teddy-cream font-medium shadow transition-colors"
               >
-                <span>Meet local puppies</span>
-                <ArrowRight className="w-4 h-4" />
+                Meet local puppies
               </Link>
             </div>
           </div>
 
-          {/* Path 2: Imported from Korea */}
-          <div className="bg-brand-cream/90 backdrop-blur-xs rounded-3xl p-8 border-2 border-brand-dark/10 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between group">
-            <div>
-              <div className="w-14 h-14 rounded-2xl bg-brand-gold/30 flex items-center justify-center text-brand-rust mb-6 border border-brand-dark/10 group-hover:scale-110 transition-transform">
-                <Plane className="w-7 h-7" />
-              </div>
-
-              <span className="text-xs uppercase font-bold tracking-widest text-brand-amber">
-                Exclusive Concierge
-              </span>
-
-              <h3 className="font-display text-2xl sm:text-3xl font-bold text-brand-dark mt-1">
-                Imported from Korea
-              </h3>
-
-              <p className="mt-3 text-sm sm:text-base text-brand-dark/80 leading-relaxed font-sans">
-                Direct from Korea’s most celebrated ethical nurseries with full flight care, health certificates, international pet passport, and VIP hand delivery across the UAE.
-              </p>
-
-              <ul className="mt-6 space-y-2.5 text-xs sm:text-sm text-brand-dark/85">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
-                  <span>Rare doll-face teacup facial proportions</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
-                  <span>Temperature-monitored direct flight escort</span>
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-brand-amber shrink-0" />
-                  <span>Delivery to your door in 7–14 business days</span>
-                </li>
-              </ul>
+          {/* Right Branch: Imported for you */}
+          <div className="relative z-10 bg-teddy-cream/90 backdrop-blur-sm p-6 sm:p-8 rounded-3xl border-2 border-teddy-brown/20 shadow-xl flex flex-col justify-between">
+            {/* Wooden directional arrow */}
+            <div className="inline-block bg-[#8b5a3c] text-teddy-cream px-6 py-2.5 rounded-r-full font-display font-bold text-lg sm:text-xl shadow mb-6 self-end">
+              ⮜ Imported for you
             </div>
 
-            <div className="mt-8 pt-6 border-t border-brand-dark/10">
+            {/* Flight Arc and Flying Plane */}
+            <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden border-2 border-teddy-brown/20 bg-teddy-sand/30 mb-6 flex flex-col justify-center items-center">
+              <Image
+                src="/brand/real/airplane-pup.png"
+                alt="Korea to Dubai safe flight"
+                fill
+                className="object-contain animate-float"
+              />
+            </div>
+
+            <div>
+              <h3 className="font-display font-bold text-2xl text-teddy-brown mb-2">
+                Imported from Korea
+              </h3>
+              <p className="font-sans text-sm sm:text-base text-teddy-brown/80 leading-relaxed mb-6">
+                Exclusive Korean teacup puppies, delivered. Order from the world’s most reputable breeders and let us handle the import safely.
+              </p>
               <Link
                 href="/puppies?origin=imported"
-                className="inline-flex items-center justify-center gap-2 w-full py-3.5 rounded-full bg-brand-sand border border-brand-dark/15 text-brand-dark font-semibold text-sm shadow-xs hover:bg-brand-gold/40 transition"
+                className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-teddy-rust hover:bg-teddy-rust-deep text-teddy-cream font-medium shadow transition-colors"
               >
-                <span>Explore Korean imports</span>
-                <ArrowRight className="w-4 h-4" />
+                See imported puppies
               </Link>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Quilt transition to Scene 4 */}
-      <div className="relative z-30 pt-10">
-        <QuiltDivider fillColor="#f7d18d" />
+        {/* Mascot standing at base of signpost */}
+        <div className="relative mt-8 flex flex-col items-center">
+          <div className="relative w-24 h-20">
+            <Image
+              src="/brand/real/mascot-standing.png"
+              alt="TeddyPups Mascot"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <span className="font-hand text-teddy-brown text-sm mt-1">
+            Choose your way — showroom visit or global concierge!
+          </span>
+        </div>
       </div>
     </section>
   );

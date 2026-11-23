@@ -7,6 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { FloatingWhatsApp } from '@/components/layout/FloatingWhatsApp';
 import { MobileStickyBar } from '@/components/layout/MobileStickyBar';
 import { SmoothScroll } from '@/components/layout/SmoothScroll';
+import { PawTrailCanvas } from '@/components/ui/PawTrailCanvas';
 
 const fraunces = Fraunces({
   subsets: ['latin'],
@@ -65,6 +66,7 @@ export default function RootLayout({
     >
       <body className="bg-brand-cream text-brand-dark antialiased flex flex-col min-h-screen">
         <SmoothScroll>
+          <PawTrailCanvas />
           <Navbar />
           <div className="flex-1 pt-16 sm:pt-20">{children}</div>
           <Footer />

@@ -1,97 +1,126 @@
-import { ShieldCheck, Award, FileCheck, Users } from 'lucide-react';
-import { PawIcon } from '@/components/ui/PawIcon';
-import { QuiltDivider } from './QuiltDivider';
+import Image from 'next/image';
+
+const passportPoints = [
+  {
+    title: 'Vet-checked & healthy',
+    desc: 'Every puppy comes vaccinated, dewormed, and with a verified health certificate.',
+    icon: '❤️',
+    stampColor: '#8b3a20',
+  },
+  {
+    title: 'Korea to Dubai, safely',
+    desc: 'Trusted breeders, safe travel, and premium care from start to finish.',
+    icon: '✈️',
+    stampColor: '#2b583e',
+  },
+  {
+    title: 'Support 24/7',
+    desc: 'Always here to help, from choosing your puppy to post-delivery support.',
+    icon: '💬',
+    stampColor: '#4d2b19',
+  },
+  {
+    title: 'Trusted by families worldwide',
+    desc: 'Puppies delivered to loving homes all around the world.',
+    icon: '🌐',
+    stampColor: '#a24a1a',
+  },
+];
 
 export function TrustScene() {
-  const trustPoints = [
-    {
-      title: 'Health Guarantee & Vet Certified',
-      desc: 'Every puppy comes with an official veterinary health certificate, complete vaccination history, and 1-year genetic health guarantee.',
-      icon: ShieldCheck,
-      stampColor: '#c2622b',
-      tilt: '-rotate-2',
-    },
-    {
-      title: 'Ethical Nursery Standards',
-      desc: 'We never source from puppy mills. All puppies are raised under nurturing, stress-free home conditions with continuous maternal care.',
-      icon: Award,
-      stampColor: '#a24a1a',
-      tilt: 'rotate-1',
-    },
-    {
-      title: 'Official Pet Passport & Microchip',
-      desc: 'Compliant with UAE Ministry of Climate Change & Environment (MOCCAE) standards, with permanent ISO microchip registration.',
-      icon: FileCheck,
-      stampColor: '#6b2a1c',
-      tilt: '-rotate-1',
-    },
-    {
-      title: 'Trusted by Families Across UAE',
-      desc: 'Hundreds of happy families in Palm Jumeirah, Downtown Dubai, and Saadiyat Island trust our concierge service for healthy teacup companions.',
-      icon: Users,
-      stampColor: '#c2622b',
-      tilt: 'rotate-2',
-    },
-  ];
-
   return (
-    <section
-      data-section="trust"
-      className="relative min-h-[85vh] bg-gradient-to-b from-[#f0b866] to-[#a65a30] pt-14 pb-16 text-brand-cream flex flex-col justify-between"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="text-center max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-brand-cream/20 border border-brand-cream/20 text-xs font-bold text-white uppercase tracking-wider mb-3 backdrop-blur-xs">
-            <PawIcon className="w-3.5 h-3.5" />
-            <span>Puppy Passport Standards</span>
-          </div>
+    <section className="relative py-16 sm:py-24 overflow-hidden">
+      <div className="max-w-5xl mx-auto px-4">
+        {/* Open Leather Passport Booklet Design Matching Recording */}
+        <div className="relative bg-[#fcf6e8] border-8 border-[#522b15] rounded-[36px] shadow-2xl p-6 sm:p-12 overflow-hidden">
+          {/* Passport stitch spine down center */}
+          <div
+            className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 border-r-2 border-dashed border-teddy-brown/20 -translate-x-1/2"
+            aria-hidden="true"
+          />
 
-          <h2 className="font-display text-3xl sm:text-5xl font-bold text-white tracking-tight">
-            Why families trust TeddyPups
-          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 relative z-10">
+            {/* Left Page: Header & Mascot */}
+            <div className="flex flex-col justify-between">
+              <div>
+                <span className="font-hand text-lg sm:text-xl text-teddy-rust tracking-wider">
+                  puppy passport
+                </span>
+                <h2 className="font-display font-black text-4xl sm:text-5xl text-teddy-brown leading-tight mt-1 mb-4">
+                  Why families trust TeddyPups
+                </h2>
+                <p className="font-sans text-sm sm:text-base text-teddy-brown/80 leading-relaxed">
+                  We guarantee the lineage, health, and welfare of every single puppy. Our international passport certification ensures your peace of mind.
+                </p>
+              </div>
 
-          <p className="mt-4 text-base sm:text-lg text-brand-cream/90 font-sans">
-            Our unwavering commitment to veterinary ethics, transparent bloodlines, and lifelong client support sets us apart in the UAE.
-          </p>
-        </div>
-
-        {/* 4 Trust Stamps Grid */}
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {trustPoints.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={idx}
-                className={`bg-brand-cream text-brand-dark rounded-3xl p-6 border-2 border-dashed border-brand-dark/20 shadow-md transition-all duration-300 hover:scale-105 hover:rotate-0 ${item.tilt} flex flex-col justify-between`}
-              >
-                <div>
-                  {/* Passport Stamp Edge */}
-                  <div className="w-14 h-14 rounded-full border-2 border-brand-rust flex items-center justify-center text-brand-rust mb-5 bg-brand-sand/30">
-                    <Icon className="w-7 h-7" />
-                  </div>
-
-                  <h3 className="font-display font-bold text-xl text-brand-dark leading-snug">
-                    {item.title}
+              {/* Point 1: Vet Checked */}
+              <div className="mt-8 p-6 rounded-2xl border-2 border-dashed border-[#8b3a20]/40 bg-white/60 shadow-sm transform -rotate-1 hover:rotate-0 transition-transform">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">{passportPoints[0].icon}</span>
+                  <h3 className="font-display font-bold text-lg text-teddy-brown">
+                    {passportPoints[0].title}
                   </h3>
-
-                  <p className="mt-3 text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
-                    {item.desc}
-                  </p>
                 </div>
+                <p className="font-sans text-xs sm:text-sm text-teddy-brown/75 leading-relaxed">
+                  {passportPoints[0].desc}
+                </p>
+              </div>
 
-                <div className="mt-6 pt-3 border-t border-brand-dark/10 flex items-center justify-between text-[11px] font-semibold text-brand-rust">
-                  <span>VERIFIED VET APPROVED</span>
-                  <PawIcon className="w-3.5 h-3.5" />
+              {/* Point 3: Support 24/7 */}
+              <div className="mt-6 p-6 rounded-2xl border-2 border-dashed border-[#4d2b19]/40 bg-white/60 shadow-sm transform rotate-1 hover:rotate-0 transition-transform">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">{passportPoints[2].icon}</span>
+                  <h3 className="font-display font-bold text-lg text-teddy-brown">
+                    {passportPoints[2].title}
+                  </h3>
+                </div>
+                <p className="font-sans text-xs sm:text-sm text-teddy-brown/75 leading-relaxed">
+                  {passportPoints[2].desc}
+                </p>
+              </div>
+            </div>
+
+            {/* Right Page: Safe Flights & Worldwide Stamp */}
+            <div className="flex flex-col justify-between">
+              {/* Point 2: Korea to Dubai flight */}
+              <div className="p-6 rounded-2xl border-2 border-dashed border-[#2b583e]/40 bg-white/60 shadow-sm transform rotate-2 hover:rotate-0 transition-transform">
+                <div className="flex items-center gap-3 mb-2">
+                  <span className="text-2xl">{passportPoints[1].icon}</span>
+                  <h3 className="font-display font-bold text-lg text-teddy-brown">
+                    {passportPoints[1].title}
+                  </h3>
+                </div>
+                <p className="font-sans text-xs sm:text-sm text-teddy-brown/75 leading-relaxed">
+                  {passportPoints[1].desc}
+                </p>
+              </div>
+
+              {/* Point 4: Circular World Stamp */}
+              <div className="mt-6 p-6 rounded-full border-4 border-dashed border-[#a24a1a]/50 bg-white/70 shadow-sm text-center flex flex-col items-center justify-center aspect-square max-w-[280px] mx-auto transform -rotate-2 hover:rotate-0 transition-transform">
+                <span className="text-3xl mb-1">{passportPoints[3].icon}</span>
+                <h3 className="font-display font-bold text-base text-teddy-brown mb-1">
+                  {passportPoints[3].title}
+                </h3>
+                <p className="font-sans text-[11px] text-teddy-brown/70 max-w-[180px] leading-tight">
+                  {passportPoints[3].desc}
+                </p>
+              </div>
+
+              {/* Mascot puppy in the passport */}
+              <div className="mt-4 flex justify-end">
+                <div className="relative w-20 h-16">
+                  <Image
+                    src="/brand/real/mascot-standing.png"
+                    alt="TeddyPups Mascot"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
               </div>
-            );
-          })}
+            </div>
+          </div>
         </div>
-      </div>
-
-      {/* Quilt transition to Scene 6 */}
-      <div className="relative z-30 pt-10">
-        <QuiltDivider fillColor="#a65a30" />
       </div>
     </section>
   );

@@ -48,3 +48,15 @@
 
 ## Missing Assets
 - None. All 15 puppy photos, 8 family polaroids, paw cursors, brand logos, and icons are active and optimized in `/public`.
+
+## Video Parity Updates (Post-P8)
+- [x] Analyzed 2m 54s user recording at `C:\Users\ACER\Videos\Screen Recordings\Screen Recording 2026-11-23 234612.mp4`
+- [x] Extracted real puppy photos (`hero-pup-*.jpg`, `meet-pup-*.jpg`) and family polaroids (`family-*.jpg`)
+- [x] Implemented animated wooden arched doorway carousel in Meet the Pups with perspective rotation
+- [x] Implemented center wooden directional signpost (`Puppies in Dubai` / `Imported for you`) with animated airplane flight arc
+- [x] Implemented interactive smartphone WhatsApp mockup with breed filters and prefilled messaging
+- [x] Implemented open leather passport booklet in Trust scene with dashed rubber-stamp badges
+- [x] Implemented rustic wooden shelf with masked-tape polaroid photos in Happy Families scene
+- [x] Added basket mascot graphic to the Footer
+- [x] Added `PawTrailCanvas` cursor effect for paw tracks on mouse movement
+- [x] Rebuilt with `npm run build` (27/27 static pages passing)

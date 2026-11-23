@@ -20,5 +20,10 @@ export const siteConfig = {
   socials: {
     instagram: 'https://instagram.com',
     tiktok: 'https://tiktok.com',
+    facebook: 'https://facebook.com',
   },
+  whatsappUrl: (message?: string) =>
+    `https://wa.me/971500000000?text=${encodeURIComponent(
+      message || 'Hello TeddyPups UAE! I am interested in inquiring about your available puppies.'
+    )}`,
 };

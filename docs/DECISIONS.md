@@ -80,3 +80,9 @@
 - **Decision**: Generated `sitemap.ts` and `robots.ts` using Next.js Metadata Route handlers, combined with setting `metadataBase: new URL(siteConfig.url)`.
 - **Why**: Ensures search crawlers like Googlebot discover every puppy detail page and subpage automatically, while guaranteeing social sharing previews (on WhatsApp, iMessage, and Twitter) display fully qualified image URLs.
 - **Alternatives Considered**: Static handwritten `sitemap.xml` file (prone to going out of sync when puppies are added or removed).
+
+## Decision: High-Fidelity Asset Extraction from Video Recording for 1:1 Parity
+- **Context:** The offline saved copy lacked original CDN image assets because the domain DNS is offline. The user provided an authentic screen recording of the live site.
+- **Choice:** Extracted keyframe bitmaps directly from the 1080p recording using OpenCV, segmented them into dedicated components (`hero-pup-*`, `meet-pup-*`, `family-*`, `airplane-pup`, `mascot-*`), and loaded them via Next.js `next/image` with responsive sizing.
+- **Alternatives Considered:** Keeping synthetic SVG drawings (less authentic; fails to match user recording visual fidelity).
+- **Trade-off:** Minimal raster footprint with maximum visual fidelity and authentic presentation value for Loom walkthrough.
