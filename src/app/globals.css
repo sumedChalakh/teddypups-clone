@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-dark: #2a170e;
+  --color-gold: #f2be6b;
+  --color-amber: #e4a352;
+  --color-cream: #fffdf8;
+  --color-sand: #fbe3b4;
+  --color-blush: #f9b9a6;
+  --color-rose: #e98c8c;
+  --color-rust: #c2622b;
+  --color-rust-dark: #a24a1a;
+  --color-deep: #6b2a1c;
+}
+
+html {
+  cursor: url('/cursor/paw.svg') 8 8, auto;
+  color: var(--color-dark);
+  background-color: var(--color-cream);
+  font-family: var(--font-figtree), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom interactive cursor */
+a,
+button,
+[role='button'],
+input,
+select,
+textarea,
+label {
+  cursor: url('/cursor/paw-press.svg') 8 8, pointer;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fffdf8;
+}
+::-webkit-scrollbar-thumb {
+  background: #e4a352;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c2622b;
+}
