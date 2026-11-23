@@ -108,3 +108,14 @@ next
 - **Summary**:
   Built the responsive Navbar with scroll detection, full-screen accessible MobileMenu with paw accents, and rich Footer with wavy hill SVG and Dubai showroom contacts.
   Added FloatingWhatsApp action button, mobile-only sticky action bar (WhatsApp & Call), and Lenis smooth scrolling with reduced-motion support.
+
+
+## Phase 3: Data
+- **Date/Time**: 2026-11-23T23:07:37+05:30
+- **User Prompt (Verbatim)**:
+```
+next
+```
+- **Summary**:
+  Parsed and typed 15 distinct puppies (`src/data/puppies.ts`) covering all 5 breeds (Maltipoo, Pomeranian, Poodle, Cavapoo, Shih-Tzu) and both origins (Dubai showroom & imported Korea).
+  Created typed FAQ data (`src/data/faqs.ts`) across 4 categories and 8 happy family testimonials (`src/data/testimonials.ts`) with UAE locations. Generated brand-aligned SVG portrait media in `public/puppies/` and `public/families/`.

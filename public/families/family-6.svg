@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="fgrad-6" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#f9b9a6" />
+      <stop offset="100%" stop-color="#fffdf8" />
+    </radialGradient>
+  </defs>
+
+  <rect width="500" height="500" fill="url(#fgrad-6)" rx="16" />
+  <rect x="20" y="20" width="460" height="460" fill="none" stroke="#2a170e" stroke-width="2" stroke-dasharray="6 6" rx="12" opacity="0.3" />
+
+  <!-- Family & Puppy silhouette / illustration -->
+  <g transform="translate(100, 70)">
+    <!-- Parent 1 -->
+    <circle cx="110" cy="90" r="40" fill="#c2622b" />
+    <path d="M60 210 C60 145, 160 145, 160 210 Z" fill="#6b2a1c" />
+
+    <!-- Parent 2 -->
+    <circle cx="190" cy="100" r="36" fill="#e4a352" />
+    <path d="M145 210 C145 155, 235 155, 235 210 Z" fill="#a24a1a" />
+
+    <!-- Puppy in hands -->
+    <g transform="translate(125, 150)">
+      <ellipse cx="25" cy="20" rx="30" ry="25" fill="#f2be6b" />
+      <ellipse cx="2" cy="10" rx="10" ry="18" fill="#c2622b" transform="rotate(-20 2 10)" />
+      <ellipse cx="48" cy="10" rx="10" ry="18" fill="#c2622b" transform="rotate(20 48 10)" />
+      <circle cx="18" cy="16" r="4" fill="#2a170e" /><circle cx="32" cy="16" r="4" fill="#2a170e" />
+      <ellipse cx="25" cy="25" rx="5" ry="4" fill="#2a170e" />
+      <!-- Heart -->
+      <path d="M25 0 C25 -10, 10 -10, 10 0 C10 12, 25 18, 25 22 C25 18, 40 12, 40 0 C40 -10, 25 -10, 25 0 Z" fill="#e98c8c" transform="translate(0, -25)" />
+    </g>
+  </g>
+
+  <!-- Polaroid-style tape -->
+  <rect x="180" y="8" width="140" height="28" fill="#f2be6b" opacity="0.75" rx="3" transform="rotate(-1 250 20)" />
+
+  <!-- Caption & Location -->
+  <text x="250" y="380" text-anchor="middle" font-family="'Shantell Sans', cursive" font-size="22" font-weight="bold" fill="#2a170e">Our newest family member</text>
+  <text x="250" y="420" text-anchor="middle" font-family="'Figtree', sans-serif" font-size="16" font-weight="600" fill="#c2622b">Teacup Maltipoo &bull; Saadiyat Island, Abu Dhabi</text>
+</svg>

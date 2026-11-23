@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <defs>
+    <radialGradient id="grad-Daisy" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#fffdf8" />
+      <stop offset="100%" stop-color="#fffdf8" />
+    </radialGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#2a170e" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="600" fill="url(#grad-Daisy)" />
+  <circle cx="300" cy="300" r="230" fill="#fffdf8" opacity="0.6" />
+
+  <!-- Decorative Paw Prints in background -->
+  <g fill="#f9b9a6" opacity="0.08">
+    <circle cx="100" cy="120" r="16" />
+    <circle cx="80" cy="80" r="9" /><circle cx="105" cy="70" r="9" /><circle cx="125" cy="85" r="9" />
+    <circle cx="500" cy="480" r="20" />
+    <circle cx="480" cy="440" r="10" /><circle cx="510" cy="430" r="10" /><circle cx="535" cy="450" r="10" />
+  </g>
+
+  <!-- Puppy Illustration Group -->
+  <g filter="url(#shadow)">
+    <!-- Ears -->
+    <ellipse cx="205" cy="270" rx="48" ry="85" fill="#e98c8c" transform="rotate(-25 205 270)" />
+    <ellipse cx="395" cy="270" rx="48" ry="85" fill="#e98c8c" transform="rotate(25 395 270)" />
+
+    <!-- Head -->
+    <ellipse cx="300" cy="290" rx="135" ry="125" fill="#f9b9a6" />
+    <!-- Fluffy cheeks -->
+    <circle cx="210" cy="320" r="45" fill="#f9b9a6" />
+    <circle cx="390" cy="320" r="45" fill="#f9b9a6" />
+
+    <!-- Muzzle -->
+    <ellipse cx="300" cy="335" rx="65" ry="50" fill="#fffdf8" opacity="0.95" />
+
+    <!-- Nose -->
+    <path d="M285 315 C295 310, 305 310, 315 315 C320 325, 305 338, 300 340 C295 338, 280 325, 285 315 Z" fill="#2a170e" />
+    <ellipse cx="295" cy="318" rx="4" ry="2" fill="#fffdf8" opacity="0.6" />
+
+    <!-- Mouth -->
+    <path d="M290 342 Q300 348 300 342 Q300 348 310 342" fill="none" stroke="#2a170e" stroke-width="3" stroke-linecap="round" />
+    <ellipse cx="300" cy="352" rx="9" ry="12" fill="#e98c8c" />
+
+    <!-- Eyes with cute catchlights -->
+    <circle cx="245" cy="275" r="18" fill="#2a170e" />
+    <circle cx="240" cy="270" r="6" fill="#fffdf8" />
+    <circle cx="250" cy="280" r="3" fill="#fffdf8" />
+
+    <circle cx="355" cy="275" r="18" fill="#2a170e" />
+    <circle cx="350" cy="270" r="6" fill="#fffdf8" />
+    <circle cx="360" cy="280" r="3" fill="#fffdf8" />
+
+    <!-- Cute Blush -->
+    <ellipse cx="210" cy="325" rx="18" ry="10" fill="#f9b9a6" opacity="0.6" />
+    <ellipse cx="390" cy="325" rx="18" ry="10" fill="#f9b9a6" opacity="0.6" />
+
+    <!-- Eyebrows / Expression -->
+    <path d="M232 250 Q245 244 258 250" fill="none" stroke="#2a170e" stroke-width="3.5" stroke-linecap="round" opacity="0.5" />
+    <path d="M342 250 Q355 244 368 250" fill="none" stroke="#2a170e" stroke-width="3.5" stroke-linecap="round" opacity="0.5" />
+
+    <!-- Cute Collar & Tag -->
+    <path d="M230 395 Q300 425 370 395" fill="none" stroke="#c2622b" stroke-width="12" stroke-linecap="round" />
+    <circle cx="300" cy="425" r="15" fill="#f2be6b" stroke="#2a170e" stroke-width="2" />
+    <circle cx="300" cy="425" r="5" fill="#2a170e" />
+  </g>
+
+  <!-- Name & Breed Label -->
+  <text x="300" y="520" text-anchor="middle" font-family="'Fraunces', serif" font-size="32" font-weight="bold" fill="#2a170e">Daisy</text>
+  <text x="300" y="555" text-anchor="middle" font-family="'Figtree', sans-serif" font-size="18" font-weight="600" fill="#a24a1a" letter-spacing="1">MALTIPOO</text>
+</svg>

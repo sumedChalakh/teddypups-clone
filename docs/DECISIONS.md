@@ -35,3 +35,14 @@
 - **Decision**: Managed body scroll locks (`document.body.style.overflow = 'hidden'`) and `keydown` Escape listeners inside `MobileMenu.tsx` with proper ARIA attributes (`role="dialog"`, `aria-modal="true"`).
 - **Why**: Prevents background content scrolling underneath the menu, supports keyboard navigation, and provides an effortless escape path for accessibility compliance.
 - **Alternatives Considered**: Simple checkbox hack or CSS-only drawer (poor accessibility and no keyboard escape support).
+
+
+## 8. Typed Local Data Architecture (`src/data/`)
+- **Decision**: Modeled all puppy inventory, FAQs, and testimonials in strongly-typed local TypeScript files (`puppies.ts`, `faqs.ts`, `testimonials.ts`) rather than setting up an external database.
+- **Why**: Zero network latency, instant build-time static generation (SSG) on Vercel, type-safe filtering on query parameters without cold starts or database credentials.
+- **Alternatives Considered**: Headless CMS or SQLite database (adds unnecessary complexity and runtime dependencies for a client-side presentation prototype).
+
+## 9. Scalable SVG Vector Puppy & Family Artworks
+- **Decision**: Created dedicated SVG portraits in `public/puppies/` and `public/families/` with warm pastel brand gradients and expressive character illustrations, while retaining the real photographic cover for Max.
+- **Why**: The scraped reference site was missing several remote CDN images since the domain is no longer on public DNS. High-fidelity SVGs load instantly, look pristine on high-DPI retina displays, and ensure 0 broken media links across all 15 puppy cards and polaroids.
+- **Alternatives Considered**: Generic placeholder solid boxes (harms conversion aesthetics and assignment quality).
