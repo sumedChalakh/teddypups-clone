@@ -23,30 +23,31 @@
   - Git commit: `cc7804c`.
 - [x] **P4 Home Page**:
   - Built `QuiltDivider.tsx` implementing the scalloped stitched quilt SVG edge divider.
-  - Built all 8 home page scenes (`HeroScene`, `MeetScene`, `PathsScene`, `JourneyScene`, `TrustScene`, `FamiliesScene`, `FaqScene`, `FinalCtaScene`) with morning-to-night sky gradients.
+  - Built all 8 home page scenes with morning-to-night sky gradients.
   - Git commit: `d673380`.
 - [x] **P5 Puppies Listing & Detail**:
   - Built `/puppies` listing route with client-side Suspense boundary and URL query parameter filtering (`?origin=local|imported` & `?breed=...`).
   - Built Empty State with instant reset filter button.
   - Built `/puppies/[slug]` dynamic detail route featuring `generateStaticParams()` pre-rendering all 15 puppy pages.
-  - Interactive photo gallery thumbnail switcher, comprehensive specification dl grid, and prefilled WhatsApp inquiry action.
-  - Verified `npm run lint` (0 warnings, 0 errors) and `npm run build` (20/20 static pages generated).
+  - Git commit: `4b4105f`.
+- [x] **P6 Remaining Pages**:
+  - Built `/happy-families`: Client testimonials, star ratings, and community submission banner.
+  - Built `/how-it-works`: 3-stage guide + `#delivery` anchor highlighting climate-controlled delivery across all 7 Emirates.
+  - Built `/faq`: Categorized FAQ accordion (General, Health, Import, Delivery) with live toggle and direct WhatsApp prompt.
+  - Built `/contact`: Showroom address, valet notes, operating hours, direct phone link, and interactive appointment form.
+  - Built `/gone-home`: Gallery of happily adopted puppies settled with UAE families.
+  - Verified `npm run lint` (0 warnings, 0 errors) and `npm run build` (all 25 static pages compiled successfully).
 
 ## In Progress
-- [ ] **P6 Remaining Pages**:
-  - `/happy-families` (family polaroids and adoption reviews)
-  - `/how-it-works` (concierge process with `#delivery` anchor)
-  - `/faq` (full accordion categorized FAQ)
-  - `/contact` (Dubai showroom visit form, direct calls, maps, and hours)
-  - `/gone-home` (happy puppies already adopted and living with UAE families)
+- [ ] **P7 Polish & Responsive**:
+  - Viewport verification at 375px (mobile), 768px (tablet), and 1280px (desktop).
+  - SEO metadata check across all pages, favicon verification, and accessible tags.
+  - Lighthouse performance, accessibility, and reduced-motion audit.
 
 ## Next
-- [ ] **P7 Polish**:
-  - Breakpoint responsiveness verification (375px, 768px, 1280px).
-  - Lighthouse performance, accessibility, SEO audits.
-  - prefers-reduced-motion verification.
 - [ ] **P8 Finish**:
-  - Comprehensive `README.md` and Vercel deployment checklist.
+  - Final README documentation (overview, stack, setup, project structure, scripts, deployment guide).
+  - Vercel deployment checklist.
 
 ## Missing Assets
 - None.

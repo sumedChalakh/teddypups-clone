@@ -68,3 +68,9 @@
 - **Decision**: Defined `generateStaticParams()` in `src/app/(site)/puppies/[slug]/page.tsx` returning all 15 puppy slugs at build time.
 - **Why**: Yields blazing fast load times on Vercel with zero server execution delay, perfect SEO rankings, and prerendered OpenGraph cards for WhatsApp link previews.
 - **Alternatives Considered**: Server-side rendering (SSR) on every incoming request (incurs unnecessary latency and compute overhead).
+
+
+## 14. Subpage Architecture & Interactive Engagement
+- **Decision**: Implemented dedicated subpages (`/happy-families`, `/how-it-works#delivery`, `/faq`, `/contact`, `/gone-home`) with interactive client components (`ContactForm`, `FaqPageView`) preserving the warm storybook aesthetics.
+- **Why**: Allows customers to deeply research veterinary standards, delivery logistics to Abu Dhabi/Sharjah, and read verified client experiences without leaving the site or encountering generic corporate forms.
+- **Alternatives Considered**: Lumping all information into single modal popups or external redirect links (leads to poor SEO indexing and friction on mobile devices).
