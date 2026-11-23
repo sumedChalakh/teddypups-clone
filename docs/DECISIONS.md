@@ -57,3 +57,14 @@
 - **Decision**: Built a reusable SVG pattern generator in `QuiltDivider.tsx` that replicates the original site’s hand-stitched scallop border.
 - **Why**: Creates organic, handmade physical transitions between the morning sky gradients down into night tones, reinforcing the warm, comforting "Teddy" boutique brand identity.
 - **Alternatives Considered**: Straight CSS borders or plain gradient blends (feels clinical and loses the storybook charm of the reference site).
+
+
+## 12. URL Query-Driven Search Parameters with Suspense
+- **Decision**: Implemented listing filters using standard browser query params (`?origin=...&breed=...`) combined with `next/navigation`'s `useSearchParams()` wrapped inside a Next.js `<Suspense>` boundary.
+- **Why**: Allows direct shareable URLs (e.g. `/puppies?origin=local` or `/puppies?breed=maltipoo`) that can be bookmarked or shared over WhatsApp, while satisfying App Router's client-side deopt boundaries during static builds.
+- **Alternatives Considered**: In-memory React state without URL params (prevents deep linking and direct navigation from other pages).
+
+## 13. Static Site Generation (SSG) for All 15 Puppy Slugs
+- **Decision**: Defined `generateStaticParams()` in `src/app/(site)/puppies/[slug]/page.tsx` returning all 15 puppy slugs at build time.
+- **Why**: Yields blazing fast load times on Vercel with zero server execution delay, perfect SEO rankings, and prerendered OpenGraph cards for WhatsApp link previews.
+- **Alternatives Considered**: Server-side rendering (SSR) on every incoming request (incurs unnecessary latency and compute overhead).

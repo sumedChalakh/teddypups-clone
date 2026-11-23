@@ -23,24 +23,30 @@
   - Git commit: `cc7804c`.
 - [x] **P4 Home Page**:
   - Built `QuiltDivider.tsx` implementing the scalloped stitched quilt SVG edge divider.
-  - Built `HeroScene.tsx` (Scene 1, `#fffdf8` to `#fff1d8`) with headline, 2 CTAs, featured puppy lineup, and peeking teddy.
-  - Built `MeetScene.tsx` (Scene 2, `#fff1d8` to `#fbe3b4`) with live interactive breed filter tabs, available badges, and video tags.
-  - Built `PathsScene.tsx` (Scene 3, `#fbe3b4` to `#f7d18d`) contrasting Dubai showroom walk-ins against Korean imports.
-  - Built `JourneyScene.tsx` (Scene 4, `#f7d18d` to `#f0b866`) with 3 concierge steps and an interactive WhatsApp chat preview with breed quick links.
-  - Built `TrustScene.tsx` (Scene 5, `#f0b866` to `#a65a30`) with 4 passport verification stamps.
-  - Built `FamiliesScene.tsx` (Scene 6, `#a65a30` to `#4d2b19`) with washi-taped polaroid photowall and 5-star ratings.
-  - Built `FaqScene.tsx` (Scene 7, `#4d2b19` to `#2f1a10`) with keyboard-accessible accordion in night atmosphere.
-  - Built `FinalCtaScene.tsx` (Scene 8, `#2f1a10` to `#24130b`) with final adoption conversion CTAs and showroom pill.
-  - Verified `npm run lint` and `npm run build` (0 warnings, 0 errors).
+  - Built all 8 home page scenes (`HeroScene`, `MeetScene`, `PathsScene`, `JourneyScene`, `TrustScene`, `FamiliesScene`, `FaqScene`, `FinalCtaScene`) with morning-to-night sky gradients.
+  - Git commit: `d673380`.
+- [x] **P5 Puppies Listing & Detail**:
+  - Built `/puppies` listing route with client-side Suspense boundary and URL query parameter filtering (`?origin=local|imported` & `?breed=...`).
+  - Built Empty State with instant reset filter button.
+  - Built `/puppies/[slug]` dynamic detail route featuring `generateStaticParams()` pre-rendering all 15 puppy pages.
+  - Interactive photo gallery thumbnail switcher, comprehensive specification dl grid, and prefilled WhatsApp inquiry action.
+  - Verified `npm run lint` (0 warnings, 0 errors) and `npm run build` (20/20 static pages generated).
 
 ## In Progress
-- [ ] Waiting for user go-ahead ("next") to begin Phase P5 (Puppies listing with query-param filters, then the [slug] detail page).
+- [ ] **P6 Remaining Pages**:
+  - `/happy-families` (family polaroids and adoption reviews)
+  - `/how-it-works` (concierge process with `#delivery` anchor)
+  - `/faq` (full accordion categorized FAQ)
+  - `/contact` (Dubai showroom visit form, direct calls, maps, and hours)
+  - `/gone-home` (happy puppies already adopted and living with UAE families)
 
 ## Next
-- [ ] **P5 Puppies Listing & Detail**:
-  - `/puppies` page with URL query parameter filters (`?origin=local|imported` and `?breed=maltipoo|pomeranian|poodle|cavapoo|shih-tzu`).
-  - Empty state with reset filters button.
-  - `/puppies/[slug]` detail page with gallery, breed, age, gender, origin, status badge, microchip ID, vaccination details, and direct WhatsApp enquiry pre-filled with the puppy's name.
+- [ ] **P7 Polish**:
+  - Breakpoint responsiveness verification (375px, 768px, 1280px).
+  - Lighthouse performance, accessibility, SEO audits.
+  - prefers-reduced-motion verification.
+- [ ] **P8 Finish**:
+  - Comprehensive `README.md` and Vercel deployment checklist.
 
 ## Missing Assets
 - None.

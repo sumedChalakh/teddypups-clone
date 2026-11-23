@@ -131,3 +131,14 @@ next
   Implemented all 8 full-height home page scenes with the continuous morning-to-night sky gradient:
   Hero (#fffdf8 to #fff1d8) with puppy lineup and CTAs, Meet the pups (#fff1d8 to #fbe3b4) with live breed filter tabs, Two ways to meet (#fbe3b4 to #f7d18d) comparing Dubai showroom vs. Korean imports, Puppy journey (#f7d18d to #f0b866) with interactive WhatsApp concierge chat preview, Puppy passport trust stamps (#f0b866 to #a65a30), Happy families dusk photowall (#a65a30 to #4d2b19), FAQ night accordion preview (#4d2b19 to #2f1a10), and Final CTA (#2f1a10 to #24130b).
   Created the scalloped stitched quilt divider (`QuiltDivider.tsx`) between scenes, verified zero lint/build errors, and committed.
+
+
+## Phase 5: Puppies Listing & Detail Pages
+- **Date/Time**: 2026-11-23T23:24:42+05:30
+- **User Prompt (Verbatim)**:
+```
+continue until all phases completes 
+```
+- **Summary**:
+  Built the `/puppies` listing route with interactive URL search param filters (`?origin=local|imported` and `?breed=...`), empty state with filter reset, and responsive cards with video indicators and pricing.
+  Built `/puppies/[slug]` dynamic detail route with SSG pre-rendering across all 15 puppies, image gallery switcher, specification dl matrix, health guarantee callouts, and personalized WhatsApp conversion triggers.
