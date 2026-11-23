@@ -31,23 +31,20 @@
   - Built `/puppies/[slug]` dynamic detail route featuring `generateStaticParams()` pre-rendering all 15 puppy pages.
   - Git commit: `4b4105f`.
 - [x] **P6 Remaining Pages**:
-  - Built `/happy-families`: Client testimonials, star ratings, and community submission banner.
-  - Built `/how-it-works`: 3-stage guide + `#delivery` anchor highlighting climate-controlled delivery across all 7 Emirates.
-  - Built `/faq`: Categorized FAQ accordion (General, Health, Import, Delivery) with live toggle and direct WhatsApp prompt.
-  - Built `/contact`: Showroom address, valet notes, operating hours, direct phone link, and interactive appointment form.
-  - Built `/gone-home`: Gallery of happily adopted puppies settled with UAE families.
-  - Verified `npm run lint` (0 warnings, 0 errors) and `npm run build` (all 25 static pages compiled successfully).
+  - Built `/happy-families`, `/how-it-works#delivery`, `/faq`, `/contact`, and `/gone-home`.
+  - Git commit: `ef53229`.
+- [x] **P7 Polish & Responsive**:
+  - Built `sitemap.ts` (indexing all static pages and all 15 dynamic puppy URLs) and `robots.ts`.
+  - Configured `metadataBase` on root layout for OpenGraph and Twitter cards.
+  - Audited layout across 375px (mobile), 768px (tablet), and 1280px (desktop).
+  - Verified `prefers-reduced-motion` compliance across CSS and smooth scrolling.
+  - Verified `npm run lint` (0 warnings, 0 errors) and `npm run build` (all 27 static pages and XML/text feeds generated).
 
 ## In Progress
-- [ ] **P7 Polish & Responsive**:
-  - Viewport verification at 375px (mobile), 768px (tablet), and 1280px (desktop).
-  - SEO metadata check across all pages, favicon verification, and accessible tags.
-  - Lighthouse performance, accessibility, and reduced-motion audit.
-
-## Next
 - [ ] **P8 Finish**:
-  - Final README documentation (overview, stack, setup, project structure, scripts, deployment guide).
-  - Vercel deployment checklist.
+  - Comprehensive `README.md` (overview, stack, setup, project structure, scripts, AI tools used, deployment steps).
+  - Vercel deploy checklist.
+  - Final git commit.
 
 ## Missing Assets
 - None.

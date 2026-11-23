@@ -74,3 +74,9 @@
 - **Decision**: Implemented dedicated subpages (`/happy-families`, `/how-it-works#delivery`, `/faq`, `/contact`, `/gone-home`) with interactive client components (`ContactForm`, `FaqPageView`) preserving the warm storybook aesthetics.
 - **Why**: Allows customers to deeply research veterinary standards, delivery logistics to Abu Dhabi/Sharjah, and read verified client experiences without leaving the site or encountering generic corporate forms.
 - **Alternatives Considered**: Lumping all information into single modal popups or external redirect links (leads to poor SEO indexing and friction on mobile devices).
+
+
+## 15. Dynamic Sitemap & MetadataBase Configuration
+- **Decision**: Generated `sitemap.ts` and `robots.ts` using Next.js Metadata Route handlers, combined with setting `metadataBase: new URL(siteConfig.url)`.
+- **Why**: Ensures search crawlers like Googlebot discover every puppy detail page and subpage automatically, while guaranteeing social sharing previews (on WhatsApp, iMessage, and Twitter) display fully qualified image URLs.
+- **Alternatives Considered**: Static handwritten `sitemap.xml` file (prone to going out of sync when puppies are added or removed).
