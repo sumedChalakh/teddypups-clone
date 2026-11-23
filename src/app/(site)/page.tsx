@@ -1,33 +1,44 @@
-import Link from 'next/link';
+import { HeroScene } from '@/components/home/HeroScene';
+import { MeetScene } from '@/components/home/MeetScene';
+import { PathsScene } from '@/components/home/PathsScene';
+import { JourneyScene } from '@/components/home/JourneyScene';
+import { TrustScene } from '@/components/home/TrustScene';
+import { FamiliesScene } from '@/components/home/FamiliesScene';
+import { FaqScene } from '@/components/home/FaqScene';
+import { FinalCtaScene } from '@/components/home/FinalCtaScene';
+
+export const metadata = {
+  title: 'TeddyPups U.A.E. | Premium Teacup Puppies in Dubai',
+  description:
+    'Ethically raised teacup and toy puppies in Dubai. Health certified, home-raised, and hand-delivered across the UAE.',
+};
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
-      <div className="max-w-xl space-y-4">
-        <span className="inline-block px-3 py-1 text-xs font-semibold rounded-full bg-brand-sand text-brand-rust uppercase tracking-wider">
-          Dubai &bull; Ethical Teacup Puppies
-        </span>
-        <h1 className="text-4xl sm:text-5xl font-display font-bold text-brand-dark tracking-tight">
-          TeddyPups U.A.E.
-        </h1>
-        <p className="text-lg text-brand-dark/80 font-sans">
-          Premium teacup puppies in Dubai. Health certified, home-raised, and hand-delivered.
-        </p>
-        <div className="pt-4 flex flex-wrap gap-4 justify-center">
-          <Link
-            href="/puppies"
-            className="px-6 py-3 rounded-full bg-brand-rust text-white font-medium hover:bg-brand-rustDark transition-colors shadow-sm"
-          >
-            Meet the Puppies
-          </Link>
-          <Link
-            href="/how-it-works"
-            className="px-6 py-3 rounded-full bg-brand-sand text-brand-dark font-medium hover:bg-brand-amber transition-colors"
-          >
-            How It Works
-          </Link>
-        </div>
-      </div>
+    <main className="w-full flex flex-col">
+      {/* Scene 1: Hero (Morning Dawn) */}
+      <HeroScene />
+
+      {/* Scene 2: Meet the Pups */}
+      <MeetScene />
+
+      {/* Scene 3: Two Ways to Meet */}
+      <PathsScene />
+
+      {/* Scene 4: Your Puppy Journey & Concierge Chat */}
+      <JourneyScene />
+
+      {/* Scene 5: Puppy Passport & Why Families Trust TeddyPups */}
+      <TrustScene />
+
+      {/* Scene 6: Happy Families Testimonials & Photowall (Dusk) */}
+      <FamiliesScene />
+
+      {/* Scene 7: Frequently Asked Questions (Night) */}
+      <FaqScene />
+
+      {/* Scene 8: Final Call to Action */}
+      <FinalCtaScene />
     </main>
   );
 }

@@ -46,3 +46,14 @@
 - **Decision**: Created dedicated SVG portraits in `public/puppies/` and `public/families/` with warm pastel brand gradients and expressive character illustrations, while retaining the real photographic cover for Max.
 - **Why**: The scraped reference site was missing several remote CDN images since the domain is no longer on public DNS. High-fidelity SVGs load instantly, look pristine on high-DPI retina displays, and ensure 0 broken media links across all 15 puppy cards and polaroids.
 - **Alternatives Considered**: Generic placeholder solid boxes (harms conversion aesthetics and assignment quality).
+
+
+## 10. 8-Scene Scroll Sky Gradient & Modular Component Decomposition
+- **Decision**: Decomposed the home page into 8 independent, testable scene components (`HeroScene`, `MeetScene`, `PathsScene`, `JourneyScene`, `TrustScene`, `FamiliesScene`, `FaqScene`, `FinalCtaScene`) in `src/components/home/`, joined by `QuiltDivider.tsx`.
+- **Why**: Allows each scene to manage its own visual hierarchy, sky gradient transitions, and responsive layouts cleanly without creating a massive, unmaintainable monolithic page file.
+- **Alternatives Considered**: Writing all 8 scenes inside a single 1500-line `page.tsx` (drastically decreases code readability and makes debugging difficult).
+
+## 11. Stitched Scalloped Quilt Separators
+- **Decision**: Built a reusable SVG pattern generator in `QuiltDivider.tsx` that replicates the original site’s hand-stitched scallop border.
+- **Why**: Creates organic, handmade physical transitions between the morning sky gradients down into night tones, reinforcing the warm, comforting "Teddy" boutique brand identity.
+- **Alternatives Considered**: Straight CSS borders or plain gradient blends (feels clinical and loses the storybook charm of the reference site).

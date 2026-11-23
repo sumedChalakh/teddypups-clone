@@ -15,26 +15,32 @@
   - Integrated `SmoothScroll` with Lenis respecting `prefers-reduced-motion`.
   - Git commit: `f600915`.
 - [x] **P3 Data**:
-  - Created typed puppy models and database in `src/data/puppies.ts` with 15 complete puppy profiles covering all required breeds (`maltipoo`, `pomeranian`, `poodle`, `cavapoo`, `shih-tzu`) and origins (`local` Dubai showroom vs. `imported` Korea).
+  - Created typed puppy models in `src/data/puppies.ts` with 15 complete puppy profiles covering all required breeds and origins.
   - Implemented query filter helper functions (`getFilteredPuppies`, `getPuppyBySlug`, `getGoneHomePuppies`).
-  - Created structured, category-indexed FAQ data in `src/data/faqs.ts`.
-  - Created heartwarming client adoption testimonials in `src/data/testimonials.ts` referencing UAE neighborhoods (Dubai Marina, Palm Jumeirah, Downtown, Emirates Hills, Saadiyat Island).
+  - Created structured FAQ data in `src/data/faqs.ts`.
+  - Created client adoption testimonials in `src/data/testimonials.ts`.
   - Generated and organized optimized SVG puppy portraits and polaroid family moments in `public/puppies/` and `public/families/`.
+  - Git commit: `cc7804c`.
+- [x] **P4 Home Page**:
+  - Built `QuiltDivider.tsx` implementing the scalloped stitched quilt SVG edge divider.
+  - Built `HeroScene.tsx` (Scene 1, `#fffdf8` to `#fff1d8`) with headline, 2 CTAs, featured puppy lineup, and peeking teddy.
+  - Built `MeetScene.tsx` (Scene 2, `#fff1d8` to `#fbe3b4`) with live interactive breed filter tabs, available badges, and video tags.
+  - Built `PathsScene.tsx` (Scene 3, `#fbe3b4` to `#f7d18d`) contrasting Dubai showroom walk-ins against Korean imports.
+  - Built `JourneyScene.tsx` (Scene 4, `#f7d18d` to `#f0b866`) with 3 concierge steps and an interactive WhatsApp chat preview with breed quick links.
+  - Built `TrustScene.tsx` (Scene 5, `#f0b866` to `#a65a30`) with 4 passport verification stamps.
+  - Built `FamiliesScene.tsx` (Scene 6, `#a65a30` to `#4d2b19`) with washi-taped polaroid photowall and 5-star ratings.
+  - Built `FaqScene.tsx` (Scene 7, `#4d2b19` to `#2f1a10`) with keyboard-accessible accordion in night atmosphere.
+  - Built `FinalCtaScene.tsx` (Scene 8, `#2f1a10` to `#24130b`) with final adoption conversion CTAs and showroom pill.
   - Verified `npm run lint` and `npm run build` (0 warnings, 0 errors).
 
 ## In Progress
-- [ ] Waiting for user go-ahead ("next") to begin Phase P4 (Home page 8 scenes with sky scroll gradient and animations).
+- [ ] Waiting for user go-ahead ("next") to begin Phase P5 (Puppies listing with query-param filters, then the [slug] detail page).
 
 ## Next
-- [ ] **P4 Home page**:
-  - Scene 1: Hero with headline "Premium teacup puppies in Dubai", 2 CTAs, image slider with breed labels.
-  - Scene 2: "Meet the pups" grid with Available badges and "with video" tags.
-  - Scene 3: "Two ways to meet your puppy" (Dubai showroom / Imported from Korea).
-  - Scene 4: 3-step "Your puppy journey" + WhatsApp-style chat preview with quick links.
-  - Scene 5: "Why families trust TeddyPups" passport & trust stamps.
-  - Scene 6: "Happy families" testimonial and photo carousel.
-  - Scene 7: Night/FAQ accordion preview.
-  - Scene 8: Final CTA + smooth scene sky gradients from morning to night.
+- [ ] **P5 Puppies Listing & Detail**:
+  - `/puppies` page with URL query parameter filters (`?origin=local|imported` and `?breed=maltipoo|pomeranian|poodle|cavapoo|shih-tzu`).
+  - Empty state with reset filters button.
+  - `/puppies/[slug]` detail page with gallery, breed, age, gender, origin, status badge, microchip ID, vaccination details, and direct WhatsApp enquiry pre-filled with the puppy's name.
 
 ## Missing Assets
-- None. All 15 puppy images and 8 family polaroid artworks are generated, optimized, and ready in `/public`.
+- None.
