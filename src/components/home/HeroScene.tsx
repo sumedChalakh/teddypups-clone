@@ -2,17 +2,17 @@ import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 
 const heroLineup = [
-  { img: '/puppies/hero/hero-1.jpg', breed: 'Teacup Maltipoo', tag: 'Available' },
-  { img: '/puppies/hero/hero-2.jpg', breed: 'Korean Teacup Pomeranian', tag: 'With video' },
-  { img: '/puppies/hero/hero-3.jpg', breed: 'Cavapoo Baby', tag: 'Ready to fly' },
-  { img: '/puppies/hero/hero-4.jpg', breed: 'Cream Teacup Pom', tag: 'Available' },
-  { img: '/puppies/hero/hero-5.jpg', breed: 'Toy Poodle Pair', tag: 'Loved' },
-  { img: '/puppies/hero/hero-6.jpg', breed: 'Mini Maltipoo', tag: 'Available' },
+  { img: '/puppies/hero/hero-1.jpg', breed: 'Korean Teacup Pomeranian', tag: 'Available' },
+  { img: '/puppies/hero/hero-2.jpg', breed: 'Korean Teacup Pomeranian', tag: 'Available' },
+  { img: '/puppies/hero/hero-3.jpg', breed: 'Maltipoo', tag: 'Available' },
+  { img: '/puppies/hero/hero-4.jpg', breed: 'Korean Teacup Pomeranian', tag: 'Available' },
+  { img: '/puppies/hero/hero-5.jpg', breed: 'Toy Poodle', tag: 'Available' },
+  { img: '/puppies/hero/hero-6.jpg', breed: 'Maltipoo', tag: 'Available' },
 ];
 
 export function HeroScene() {
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-between pt-8 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#fffdf8] to-[#fff1d8]">
+    <section className="relative min-h-[90vh] flex flex-col justify-between pt-8 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#fffdf8] to-[#fff1d8]">
       {/* Subtle decorative paw prints */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <span className="absolute top-10 left-8 text-2xl text-[#f2be6b]/35 animate-pulse">🐾</span>
@@ -147,15 +147,6 @@ export function HeroScene() {
               </div>
             ))}
 
-          </div>
-        </div>
-
-        {/* Quilted scalloped fence hem banner */}
-        <div className="w-full bg-[#fbe3b4] border-t-4 border-[#2a170e]/20 py-3.5 text-center shadow-inner">
-          <div className="max-w-6xl mx-auto px-4 flex justify-between items-center text-xs font-semibold text-[#2a170e]/75">
-            <span>🐾 Dubai Showroom Available</span>
-            <span className="hidden sm:inline">✨ Korea Direct Import with Health Guarantee</span>
-            <span>✈️ Worldwide Safe Delivery</span>
           </div>
         </div>
       </div>

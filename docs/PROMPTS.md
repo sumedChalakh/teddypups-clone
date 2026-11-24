@@ -205,3 +205,24 @@ Diagnosed and fixed all 4 home page bugs:
 2. Extracted real family polaroid photography into `/public/families/` and fixed polaroids with realistic masking tape corners and wood-grain shelf.
 3. Rebuilt Hero lineup as equal-proportions arched windows with `object-cover` and responsive overflow scroll so no clipping occurs from 375px to 1440px, displaying full text in floating breed bubbles.
 4. Populated all 15 doors in Meet the Pups with authentic puppy photos, status tags, names, breeds, ages, and horizontal scroll ending in the "Meet them all" arch.
+
+## Strict Reference Text Alignment & Navbar Re-architecture
+**Date:** 2026-11-24  
+**Prompt:**
+> Remove everything not present on the original site: the "Dubai Showroom Available / Korea
+> Direct Import / Worldwide Safe Delivery" strip, the "full health guarantee & international
+> microchip" banner, footer opening hours, the "U.A.E. · DUBAI" subtext under the logo, the 4th
+> FAQ item, the word "microchipped", and any invented polaroid captions. Use only text from
+> ../reference/puppy-site/.
+> Navbar: replace the floating pill with a flat full-width cream bar. Logo "TeddyPups", links
+> in this order: Home, Puppies, Happy families, How it works, FAQ, Visit & contact, then the
+> green "WhatsApp us" button. Highlight the active link. Remove the "Ask us anything" floating
+> label (keep mobile sticky bar). Update the route names to match. Log, commit, wait.
+
+**Summary:**
+1. Replaced floating navbar with a flat full-width `#fffdf8` cream bar matching the reference, displaying "TeddyPups" (no subtext), links ordered (Home, Puppies, Happy families, How it works, FAQ, Visit & contact) with active paw indicator, and green "WhatsApp us" button.
+2. Removed all unverified strips and banners: the showroom/import/delivery strip in Hero, the health guarantee banner under Meet, and opening hours in footer.
+3. Removed 4th FAQ item, strictly displaying the 3 original questions from the reference; eliminated the word "microchipped".
+4. Replaced invented polaroid captions with verbatim reference captions (`Lulu 🧸 with her new mummy ❤️`, `Adorable Maltipoo baby 🧸❤️`, `My new teddy puppy 🥰🧸`, `Our new puppies 🧸🥰🤗`).
+5. Removed the "Ask us anything" floating label while preserving the mobile sticky bar.
+6. Verified with `npm run lint` and `npm run build` (27/27 static pages compiled cleanly).

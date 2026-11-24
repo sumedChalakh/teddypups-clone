@@ -67,3 +67,15 @@
 - [x] Bug 3: Rebuilt Hero scene lineup with equal-size arched windows, responsive 375px–1440px layout, and full-text breed bubbles
 - [x] Bug 4: Implemented horizontal scroll for all 15 puppies in "Meet the pups" with visible photos, names, breeds, ages, and ending in "Meet them all" collection arch
 - [x] Ran `npm run lint` and `npm run build` (27/27 static pages generated with 0 errors)
+
+## Reference Text Strict Alignment (2026-11-24)
+- [x] Flat full-width cream navbar (`#fffdf8`) with exact link ordering and active indicator
+- [x] Logo set to clean "TeddyPups" (removed "U.A.E. · DUBAI" subtext)
+- [x] Removed hero footer strip ("Dubai Showroom Available / Korea Direct Import...")
+- [x] Removed "full health guarantee & international microchip" banner
+- [x] Removed footer opening hours
+- [x] Removed 4th FAQ item; matched exact 3 Q&As from reference
+- [x] Stripped the word "microchipped" across FAQs and components
+- [x] Restored authentic reference polaroid captions in Happy Families
+- [x] Removed floating "Ask us anything" badge while retaining mobile sticky bar
+- [x] Validated with `npm run lint` and `npm run build`

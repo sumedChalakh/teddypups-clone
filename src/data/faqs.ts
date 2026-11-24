@@ -10,7 +10,7 @@ export const faqs: FAQItem[] = [
     id: 'health-check',
     question: 'Are your puppies vaccinated and health-checked?',
     answer:
-      'Yes. All our puppies come with a verified health certificate from licensed veterinarians. Every puppy is fully vaccinated, dewormed, microchipped, and undergoes a comprehensive physical examination before joining your family.',
+      'Yes. All our puppies come with a verified health certificate from licensed veterinarians. Every puppy is fully vaccinated, dewormed, and undergoes a comprehensive physical examination before joining your family.',
     category: 'health',
   },
   {

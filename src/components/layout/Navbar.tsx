@@ -1,122 +1,133 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, MessageCircle } from 'lucide-react';
 import { siteConfig } from '@/config/site';
-import { MobileMenu } from './MobileMenu';
-import { PawIcon } from '@/components/ui/PawIcon';
+
+const navLinks = [
+  { label: 'Home', href: '/' },
+  { label: 'Puppies', href: '/puppies' },
+  { label: 'Happy families', href: '/happy-families' },
+  { label: 'How it works', href: '/how-it-works' },
+  { label: 'FAQ', href: '/faq' },
+  { label: 'Visit & contact', href: '/contact' },
+];
 
 export function Navbar() {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <>
-      <header
-        className={`fixed inset-x-0 top-0 z-40 transition-all duration-300 ${
-          isScrolled
-            ? 'bg-brand-cream/90 backdrop-blur-md shadow-sm py-3'
-            : 'bg-transparent py-4 sm:py-5'
-        }`}
-      >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            {/* Brand Logo & Name */}
-            <Link
-              href="/"
-              className="flex items-center gap-2.5 group"
-              aria-label="TeddyPups U.A.E. Home"
-            >
-              <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden bg-brand-sand border border-brand-gold/50 flex items-center justify-center transition-transform group-hover:scale-105">
-                <Image
-                  src="/brand/icon.png"
-                  alt="TeddyPups Logo"
-                  width={44}
-                  height={44}
-                  className="object-cover"
-                  priority
-                />
-              </div>
-              <div className="flex flex-col">
-                <span className="font-display text-xl sm:text-2xl font-bold tracking-tight text-brand-dark leading-tight flex items-center gap-1">
-                  TeddyPups
-                  <PawIcon className="w-3.5 h-3.5 text-brand-rust opacity-80" />
-                </span>
-                <span className="text-[10px] tracking-widest text-brand-rust uppercase font-semibold">
-                  U.A.E. &bull; Dubai
-                </span>
-              </div>
-            </Link>
-
-            {/* Desktop Navigation Links */}
-            <nav
-              aria-label="Main Navigation"
-              className="hidden lg:flex items-center gap-1 xl:gap-2 bg-brand-sand/60 px-4 py-1.5 rounded-full border border-brand-dark/10 backdrop-blur-sm"
-            >
-              {siteConfig.navLinks.map((link) => {
-                const isActive = pathname === link.href;
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className={`relative px-3.5 py-1.5 rounded-full text-sm font-medium transition-colors ${
-                      isActive
-                        ? 'bg-brand-cream text-brand-rust shadow-xs font-semibold'
-                        : 'text-brand-dark/80 hover:text-brand-dark hover:bg-brand-cream/60'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                );
-              })}
-            </nav>
-
-            {/* Desktop Action & Mobile Menu Toggle */}
-            <div className="flex items-center gap-3">
-              <a
-                href={`https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(
-                  siteConfig.whatsappMessage
-                )}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#25D366] text-white text-sm font-semibold shadow-xs hover:bg-[#20ba5a] transition-all hover:scale-105 active:scale-95"
-              >
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp us</span>
-              </a>
-
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(true)}
-                aria-label="Open navigation menu"
-                aria-expanded={isMobileMenuOpen}
-                className="inline-flex lg:hidden items-center justify-center p-2.5 rounded-full bg-brand-cream/90 border border-brand-dark/15 text-brand-dark hover:bg-brand-sand transition"
-              >
-                <Menu className="w-5 h-5" />
-              </button>
-            </div>
+    <header className="fixed inset-x-0 top-0 z-50 bg-[#fffdf8] border-b border-[#2a170e]/10 shadow-xs">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-18 sm:h-20 flex items-center justify-between">
+        
+        {/* Brand: Logo + "TeddyPups" (No "U.A.E. · DUBAI" subtext) */}
+        <Link href="/" className="flex items-center gap-3 group">
+          <div className="relative w-10 h-10 sm:w-11 sm:h-11 flex-shrink-0">
+            <Image
+              src="/brand/logo.png"
+              alt="TeddyPups Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
-        </div>
-      </header>
+          <span className="font-display font-black text-2xl sm:text-[26px] text-[#2a170e] tracking-tight">
+            TeddyPups
+          </span>
+        </Link>
 
-      {/* Full-screen Mobile Navigation Drawer */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-      />
-    </>
+        {/* Desktop Navigation Links in exact order */}
+        <nav className="hidden lg:flex items-center gap-7 font-sans text-sm font-semibold">
+          {navLinks.map((link) => {
+            const isActive =
+              link.href === '/'
+                ? pathname === '/'
+                : pathname.startsWith(link.href);
+
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative py-1 transition-colors flex flex-col items-center ${
+                  isActive
+                    ? 'text-[#a24a1a]'
+                    : 'text-[#2a170e]/80 hover:text-[#2a170e]'
+                }`}
+              >
+                <span>{link.label}</span>
+                {isActive && (
+                  <span className="absolute -bottom-2 text-[10px] text-[#a24a1a] leading-none" aria-hidden="true">
+                    🐾
+                  </span>
+                )}
+              </Link>
+            );
+          })}
+        </nav>
+
+        {/* Right Action: Green "WhatsApp us" Button */}
+        <div className="hidden lg:flex items-center">
+          <a
+            href={siteConfig.whatsappUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-[#1e8a4a] hover:bg-[#16703b] text-white font-bold text-sm shadow-sm transition-all hover:scale-105"
+          >
+            WhatsApp us
+          </a>
+        </div>
+
+        {/* Mobile Hamburger Toggle */}
+        <div className="flex lg:hidden items-center gap-3">
+          <a
+            href={siteConfig.whatsappUrl()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-4 py-2 rounded-full bg-[#1e8a4a] text-white font-bold text-xs"
+          >
+            WhatsApp us
+          </a>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="p-2 rounded-lg text-[#2a170e] hover:bg-black/5"
+            aria-label="Toggle navigation menu"
+          >
+            <span className="text-2xl">{mobileMenuOpen ? '✕' : '☰'}</span>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Drawer Menu */}
+      {mobileMenuOpen && (
+        <div className="lg:hidden bg-[#fffdf8] border-b border-[#2a170e]/15 px-6 py-6 space-y-4 shadow-xl">
+          <nav className="flex flex-col space-y-3 font-sans text-base font-semibold">
+            {navLinks.map((link) => {
+              const isActive =
+                link.href === '/'
+                  ? pathname === '/'
+                  : pathname.startsWith(link.href);
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`flex items-center justify-between py-2 border-b border-black/5 ${
+                    isActive ? 'text-[#a24a1a] font-bold' : 'text-[#2a170e]/80'
+                  }`}
+                >
+                  <span>{link.label}</span>
+                  {isActive && <span>🐾</span>}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
+    </header>
   );
 }

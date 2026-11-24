@@ -143,25 +143,6 @@ export function MeetScene() {
 
           </div>
         </div>
-
-        {/* Floorboard runner with standing mascot */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-2">
-          <div className="border-t-8 border-[#7a3e20] bg-[#e4a352]/20 rounded-b-2xl py-3 px-6 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-inner">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">🐾</span>
-              <span className="font-hand text-[#2a170e] text-sm sm:text-base">
-                Scroll to see all puppies — each pup includes health passport & vaccination records!
-              </span>
-            </div>
-
-            <Link
-              href="/puppies"
-              className="font-sans text-xs font-bold text-[#2a170e] hover:text-[#a24a1a] underline whitespace-nowrap"
-            >
-              See all 15 puppies ➔
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );
