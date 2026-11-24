@@ -226,3 +226,26 @@ Diagnosed and fixed all 4 home page bugs:
 4. Replaced invented polaroid captions with verbatim reference captions (`Lulu 🧸 with her new mummy ❤️`, `Adorable Maltipoo baby 🧸❤️`, `My new teddy puppy 🥰🧸`, `Our new puppies 🧸🥰🤗`).
 5. Removed the "Ask us anything" floating label while preserving the mobile sticky bar.
 6. Verified with `npm run lint` and `npm run build` (27/27 static pages compiled cleanly).
+
+## 8-Scene Vertical Sky Gradient & Quilt Dividers Implementation
+**Date:** 2026-11-24  
+**Prompt:**
+> Apply the 8-scene vertical gradient exactly to every home section (hero #fffdf8 to #fff1d8,
+> meet #fff1d8 to #fbe3b4, paths #fbe3b4 to #f7d18d, journey #f7d18d to #f0b866, passport
+> #f0b866 to #a65a30, happy families #a65a30 to #4d2b19, FAQ #4d2b19 to #2f1a10, home
+> #2f1a10 to #24130b). Each scene's bottom color must equal the next scene's top color, with a
+> scalloped quilt divider between scenes. No white gaps. Switch text color to cream on the dark
+> scenes. Log, commit, wait.
+
+**Summary:**
+1. Applied strict consecutive morning-to-night vertical gradients across all 8 home scenes:
+   - Scene 1 (Hero): `#fffdf8` to `#fff1d8`
+   - Scene 2 (Meet the pups): `#fff1d8` to `#fbe3b4`
+   - Scene 3 (Paths): `#fbe3b4` to `#f7d18d`
+   - Scene 4 (Journey): `#f7d18d` to `#f0b866`
+   - Scene 5 (Passport / Trust): `#f0b866` to `#a65a30`
+   - Scene 6 (Happy families): `#a65a30` to `#4d2b19` (switched text to `#fffdf8` cream)
+   - Scene 7 (FAQ): `#4d2b19` to `#2f1a10` (switched text to `#fffdf8` cream)
+   - Scene 8 (Final CTA / Home): `#2f1a10` to `#24130b` (switched text to `#fffdf8` cream)
+2. Linked consecutive scenes with scalloped `QuiltDivider` SVG elements whose fill colors match the top color of each following scene, completely eliminating white gaps or seams.
+3. Verified via `npm run lint` and `npm run build` (27/27 static pages compiled successfully).

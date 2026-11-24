@@ -79,3 +79,15 @@
 - [x] Restored authentic reference polaroid captions in Happy Families
 - [x] Removed floating "Ask us anything" badge while retaining mobile sticky bar
 - [x] Validated with `npm run lint` and `npm run build`
+
+## 8-Scene Gradient & Quilt Transitions (2026-11-24)
+- [x] Scene 1 (Hero): `#fffdf8` -> `#fff1d8`
+- [x] Scene 2 (Meet): `#fff1d8` -> `#fbe3b4`
+- [x] Scene 3 (Paths): `#fbe3b4` -> `#f7d18d`
+- [x] Scene 4 (Journey): `#f7d18d` -> `#f0b866`
+- [x] Scene 5 (Trust): `#f0b866` -> `#a65a30`
+- [x] Scene 6 (Families): `#a65a30` -> `#4d2b19` (cream text `#fffdf8`)
+- [x] Scene 7 (FAQ): `#4d2b19` -> `#2f1a10` (cream text `#fffdf8`)
+- [x] Scene 8 (Home CTA): `#2f1a10` -> `#24130b` (cream text `#fffdf8`)
+- [x] `QuiltDivider` scalloped SVG between every scene matching next section's top color with 0px gaps
+- [x] Verified build (`npm run build` -> 27/27 static pages)

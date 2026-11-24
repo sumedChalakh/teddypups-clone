@@ -12,7 +12,10 @@ const heroLineup = [
 
 export function HeroScene() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-between pt-8 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#fffdf8] to-[#fff1d8]">
+    <section
+      data-section="hero"
+      className="relative min-h-[90vh] flex flex-col justify-between pt-8 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#fffdf8] to-[#fff1d8] text-[#2a170e]"
+    >
       {/* Subtle decorative paw prints */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
         <span className="absolute top-10 left-8 text-2xl text-[#f2be6b]/35 animate-pulse">🐾</span>
@@ -63,21 +66,18 @@ export function HeroScene() {
         </div>
       </div>
 
-      {/* Row of Equal-Sized Arched Windows across 375px to 1440px */}
+      {/* Row of Equal-Sized Arched Windows */}
       <div className="relative mt-8 sm:mt-12 w-full">
-        {/* Horizontal scroll container on mobile, centered flex row on desktop */}
         <div className="w-full overflow-x-auto no-scrollbar px-4 sm:px-6">
           <div className="flex items-end justify-center min-w-max sm:min-w-0 sm:max-w-7xl mx-auto gap-3 sm:gap-4 pb-2">
             
             {/* Left 3 Arches */}
             {heroLineup.slice(0, 3).map((pup, i) => (
               <div key={i} className="flex flex-col items-center group flex-shrink-0">
-                {/* Speech bubble badge with full text */}
                 <div className="mb-2 bg-[#fffdf8] border border-[#2a170e]/20 text-[#2a170e] text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap opacity-90 group-hover:opacity-100 transition-opacity">
                   {pup.breed}
                 </div>
                 
-                {/* Arched Window: Fixed equal proportions, rounded-t-full */}
                 <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
                   <img
                     src={pup.img}
@@ -96,28 +96,21 @@ export function HeroScene() {
             <div className="flex flex-col items-center flex-shrink-0 z-20 pb-1">
               <div className="relative w-24 sm:w-32 md:w-36 h-36 sm:h-48 md:h-56 flex items-end justify-center">
                 <svg viewBox="0 0 160 160" className="w-full h-full overflow-visible" role="img" aria-label="Teddy mascot peeking">
-                  {/* Fluffy ears */}
                   <circle cx="28" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
                   <circle cx="132" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  {/* Head */}
                   <circle cx="80" cy="78" r="50" fill="#fbe3b4" stroke="#2a170e" strokeWidth="4.5" />
-                  {/* Head curls */}
                   <circle cx="58" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
                   <circle cx="80" cy="30" r="18" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
                   <circle cx="102" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  {/* Eyes */}
                   <circle cx="62" cy="74" r="6.5" fill="#2a170e" />
                   <circle cx="64" cy="71" r="2.2" fill="#ffffff" />
                   <circle cx="98" cy="74" r="6.5" fill="#2a170e" />
                   <circle cx="100" cy="71" r="2.2" fill="#ffffff" />
-                  {/* Muzzle */}
                   <ellipse cx="80" cy="94" rx="20" ry="14" fill="#ffffff" />
                   <path d="M72 88 Q80 84 88 88 Q80 96 72 88 Z" fill="#2a170e" />
                   <path d="M80 92 Q80 100 75 102 M80 100 Q85 102 85 100" stroke="#2a170e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-                  {/* Cheeks */}
                   <ellipse cx="50" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
                   <ellipse cx="110" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
-                  {/* Little Paws */}
                   <ellipse cx="54" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
                   <ellipse cx="106" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
                 </svg>
@@ -127,12 +120,10 @@ export function HeroScene() {
             {/* Right 3 Arches */}
             {heroLineup.slice(3, 6).map((pup, i) => (
               <div key={i} className="flex flex-col items-center group flex-shrink-0">
-                {/* Speech bubble badge with full text */}
                 <div className="mb-2 bg-[#fffdf8] border border-[#2a170e]/20 text-[#2a170e] text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap opacity-90 group-hover:opacity-100 transition-opacity">
                   {pup.breed}
                 </div>
                 
-                {/* Arched Window: Fixed equal proportions, rounded-t-full */}
                 <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
                   <img
                     src={pup.img}

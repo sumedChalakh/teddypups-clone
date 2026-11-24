@@ -9,14 +9,17 @@ const polaroids = [
 
 export function FamiliesScene() {
   return (
-    <section className="relative py-20 sm:py-28 text-[#fffdf8] overflow-hidden bg-gradient-to-b from-[#a65a30] to-[#4d2b19]">
+    <section
+      data-section="families"
+      className="relative py-20 sm:py-28 text-[#fffdf8] overflow-hidden bg-gradient-to-b from-[#a65a30] to-[#4d2b19]"
+    >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
           <div>
             <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-[#fffdf8] leading-tight">
               Happy families &amp; puppies
             </h2>
-            <p className="font-sans text-base sm:text-lg text-[#fbe3b4]/90 max-w-xl mt-3 leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-[#fffdf8]/85 max-w-xl mt-3 leading-relaxed">
               We are truly honored to see our puppies become cherished members of loving families. These heartwarming moments have been shared by our valued clients who welcomed a Teddy Pup into their homes and hearts.
             </p>
           </div>

@@ -66,7 +66,7 @@ export function FaqScene() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-5 pt-1 text-[#fbe3b4]/90 font-sans text-sm sm:text-base leading-relaxed pl-12">
+                  <div className="px-6 pb-5 pt-1 text-[#fffdf8]/85 font-sans text-sm sm:text-base leading-relaxed pl-12">
                     {faq.a}
                   </div>
                 )}
