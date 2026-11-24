@@ -43,7 +43,7 @@ export function JourneyScene() {
                     Choose your breed
                   </h3>
                   <p className="font-sans text-sm sm:text-base text-[#2a170e]/75 mt-1">
-                    Select your preferred breed or tell us what you are looking for. We will guide you based on availability and your lifestyle.
+                    Select your preferred breed or tell us what you&apos;re looking for. We&apos;ll guide you based on availability and your lifestyle.
                   </p>
                 </div>
               </li>
@@ -54,7 +54,7 @@ export function JourneyScene() {
                 </span>
                 <div>
                   <h3 className="font-display font-bold text-xl text-[#2a170e]">
-                    Get photos & details
+                    Get photos &amp; details
                   </h3>
                   <p className="font-sans text-sm sm:text-base text-[#2a170e]/75 mt-1">
                     Our team will share real photos, health details, and all necessary information directly on WhatsApp.
@@ -68,14 +68,23 @@ export function JourneyScene() {
                 </span>
                 <div>
                   <h3 className="font-display font-bold text-xl text-[#2a170e]">
-                    Meet & welcome home
+                    Secure &amp; safe delivery
                   </h3>
                   <p className="font-sans text-sm sm:text-base text-[#2a170e]/75 mt-1">
-                    Meet your pup at our showroom or receive safe VIP doorstep delivery across all 7 UAE Emirates.
+                    Once confirmed, we handle everything professionally and ensure your puppy reaches you safely and stress-free.
                   </p>
                 </div>
               </li>
             </ol>
+
+            <div className="mt-8">
+              <Link
+                href="/how-it-works"
+                className="inline-flex items-center justify-center px-6 py-2.5 rounded-full border-2 border-[#2a170e]/25 hover:border-[#2a170e] hover:bg-[#2a170e]/5 text-sm font-semibold text-[#2a170e] transition-colors"
+              >
+                How it works
+              </Link>
+            </div>
           </div>
 
           {/* Right Column: Authentic WhatsApp Phone Mockup from Video */}

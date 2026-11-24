@@ -126,3 +126,18 @@
   - Smooth 1.2s fade-out animation and scale down
 - [x] Verified build (`npm run build` -> 27/27 static pages)
 
+## Responsive 375px/768px/1280px Audit & Top 10 Visual Fixes (2026-11-24)
+- [x] Verified 100% of all 53 image paths resolve to valid public files (`public/`).
+- [x] Audited original vs clone across 375px (mobile), 768px (tablet), and 1280px (desktop).
+- [x] Fix 1: Added decorative scalloped SVG hem (`#navbar-hem-pattern`) along bottom of Navbar.
+- [x] Fix 2: Added interactive paw print SVG icons to desktop and mobile navigation links.
+- [x] Fix 3: Replaced native `<img>` elements in `HeroScene.tsx`, `MeetScene.tsx`, and `FamiliesScene.tsx` with optimized Next.js `<Image fill ... />`.
+- [x] Fix 4: Added `"welcome home"` handwritten accent tag to Scene 8 (`FinalCtaScene.tsx`).
+- [x] Fix 5: Updated Scene 8 button labels to `"Enquire on WhatsApp"` and `"Visit & contact"`.
+- [x] Fix 6: Tuned Meet the Pups (`MeetScene.tsx`) puppy doors with explicit `"with video"` badges and `"Available"` tags.
+- [x] Fix 7: Tuned Journey Scene (`JourneyScene.tsx`) phrasing to match original verbatim and added `"How it works"` link button.
+- [x] Fix 8: Added `public/brand/logo.png` ensuring logo paths resolve identically.
+- [x] Fix 9: Stripped remaining non-original terminology (`microchip` / `microchipped`) across data models.
+- [x] Fix 10: Verified `npm run lint` (`✔ No ESLint warnings or errors`) and `npm run build` (27/27 static pages passing).
+
+

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { puppies } from '@/data/puppies';
 import { Mascot } from '@/components/ui/Mascot';
 
@@ -62,6 +63,7 @@ export function MeetScene() {
                     </span>
                     <span className="font-sans text-[11px] text-[#2a170e]/70 mt-0.5 line-clamp-1">
                       {pup.genderLabel?.toLowerCase() || pup.gender}, {pup.age}
+                      {pup.withVideo && ', with video'}
                     </span>
                   </div>
 
@@ -71,11 +73,12 @@ export function MeetScene() {
                     className="relative w-full aspect-[3/4.2] rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-xl transition-all duration-300 group-hover:-translate-y-2 group-hover:shadow-2xl block"
                   >
                     {/* Real puppy photo clearly shown */}
-                    <img
+                    <Image
                       src={doorImage}
                       alt={`${pup.name} - ${pup.breed}`}
-                      className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 208px"
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                     />
 
                     {/* Half-open wooden door panel at side */}

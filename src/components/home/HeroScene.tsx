@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import { Mascot } from '@/components/ui/Mascot';
 
@@ -80,13 +81,15 @@ export function HeroScene() {
                 </div>
                 
                 <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
-                  <img
+                  <Image
                     src={pup.img}
                     alt={pup.breed}
-                    className="w-full h-full object-cover object-center"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 192px"
+                    className="object-cover object-center"
+                    priority
                   />
-                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow z-10">
                     {pup.tag}
                   </span>
                 </div>
@@ -108,13 +111,15 @@ export function HeroScene() {
                 </div>
                 
                 <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
-                  <img
+                  <Image
                     src={pup.img}
                     alt={pup.breed}
-                    className="w-full h-full object-cover object-center"
-                    loading="eager"
+                    fill
+                    sizes="(max-width: 640px) 112px, (max-width: 768px) 144px, 192px"
+                    className="object-cover object-center"
+                    priority
                   />
-                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow z-10">
                     {pup.tag}
                   </span>
                 </div>

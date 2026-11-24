@@ -170,9 +170,9 @@ export function PuppyDetailView({ puppy, relatedPuppies }: PuppyDetailViewProps)
               </div>
 
               <div className="col-span-2 pt-2 border-t border-brand-dark/10">
-                <dt className="text-brand-dark/60 font-sans">Microchip ID</dt>
+                <dt className="text-brand-dark/60 font-sans">Health Certificate ID</dt>
                 <dd className="font-mono text-xs font-semibold text-brand-dark mt-0.5">
-                  {puppy.microchipId}
+                  {puppy.healthCertId}
                 </dd>
               </div>
 

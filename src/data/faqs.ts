@@ -52,7 +52,7 @@ export const faqs: FAQItem[] = [
     id: 'what-comes-with-puppy',
     question: 'What is included with my puppy adoption package?',
     answer:
-      'Every TeddyPups adoption includes: an official veterinary health passport, microchip certificate, up-to-date vaccination record, starter premium food supply, comfort blanket carrying the scent of their littermates, favorite toy, and a 1-year genetic health guarantee.',
+      'Every TeddyPups adoption includes: an official veterinary health passport, up-to-date vaccination record, starter premium food supply, comfort blanket carrying the scent of their littermates, favorite toy, and a 1-year genetic health guarantee.',
     category: 'general',
   },
   {

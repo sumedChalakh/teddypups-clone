@@ -313,3 +313,27 @@ Diagnosed and fixed all 4 home page bugs:
    - Animations use pure CSS (`@keyframes flight-arc`, `@keyframes paw-fade`, `@keyframes stamp-thump`) with full reduced-motion safeguards.
 6. Verified via `npm run lint` and `npm run build` (27/27 static pages passing).
 
+## Section-by-Section Responsive Audit (375px, 768px, 1280px) & Top 10 Fixes
+**Date:** 2026-11-24  
+**Prompt:**
+> Open the original and localhost at 375px, 768px and 1280px, section by section, and list
+> every remaining visual difference as a table (section, original, mine, fix). Fix the top
+> 10, then run lint and build. Also verify that every image path resolves and that no content
+> exists that is not on the original.
+
+**Summary:**
+1. Audited all 53 image paths across `src/` and verified 100% resolve to valid files in `public/`.
+2. Verified removal of all non-original terminology (e.g., `microchip` / `microchipped`) across data models.
+3. Implemented top 10 visual & content fixes across breakpoints:
+   - Added scalloped bottom hem to Navbar (`#navbar-hem-pattern`).
+   - Added interactive paw print SVG icons to navigation links.
+   - Replaced native `<img>` elements with optimized Next.js `<Image fill />`.
+   - Added `"welcome home"` handwritten accent to Scene 8 (`FinalCtaScene.tsx`).
+   - Updated button labels to `"Enquire on WhatsApp"` and `"Visit & contact"`.
+   - Enhanced puppy cards in Meet the Pups with explicit `"with video"` badges.
+   - Matched Journey Scene phrasing verbatim and added `"How it works"` link.
+   - Added `public/brand/logo.png`.
+   - Sanitized remaining specifications to `"Health Certificate ID"`.
+   - Achieved 0 ESLint errors/warnings and successful 27-page static build.
+
+

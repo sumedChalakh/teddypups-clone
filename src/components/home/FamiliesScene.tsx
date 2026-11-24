@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mascot } from '@/components/ui/Mascot';
 
 const polaroids = [
@@ -60,11 +61,12 @@ export function FamiliesScene() {
 
                 {/* Photo container */}
                 <div className="relative aspect-square w-full bg-[#f0e6d2] overflow-hidden mb-3 border border-black/5">
-                  <img
+                  <Image
                     src={item.img}
                     alt={item.caption}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 640px) 45vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
 

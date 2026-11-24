@@ -22,7 +22,7 @@ export interface Puppy {
   color: string;
   estimatedWeight: string;
   birthDate: string;
-  microchipId: string;
+  healthCertId: string;
   vaccinations: string;
   temperament: string[];
   description: string;
@@ -50,12 +50,12 @@ export const puppies: Puppy[] = [
     color: 'Apricot Cream',
     estimatedWeight: '1.8 - 2.2 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829101',
+    healthCertId: '985141004829101',
     vaccinations: 'Fully vaccinated & dewormed (DHPPi + Rabies)',
     temperament: ['Playful', 'Affectionate', 'Hypoallergenic', 'Lap cuddler'],
     description:
       'Max is an exceptionally sweet male Teacup Maltipoo currently greeting visitors at our Downtown Dubai showroom. He has silky apricot curls, big expressive eyes, and a joyful, curious personality. He is pee-pad trained and loves human company.',
-    features: ['Dubai Showroom Ready', 'Verified Health Certificate', 'Microchipped', '1-Year Genetic Guarantee'],
+    features: ['Dubai Showroom Ready', 'Verified Health Certificate', 'Health Verified', '1-Year Genetic Guarantee'],
   },
   {
     id: '0abcf3f5-0080-44c1-b1e1-2a2de24a3cf4',
@@ -77,7 +77,7 @@ export const puppies: Puppy[] = [
     color: 'Snow White & Champagne',
     estimatedWeight: '1.4 - 1.8 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829102',
+    healthCertId: '985141004829102',
     vaccinations: 'Age-appropriate vaccinations with international pet passport',
     temperament: ['Gentle', 'Quiet', 'Intelligent', 'Loving'],
     description:
@@ -104,8 +104,8 @@ export const puppies: Puppy[] = [
     color: 'Deep Chocolate Red',
     estimatedWeight: '1.5 - 1.9 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829103',
-    vaccinations: 'Vaccinated & microchipped under licensed veterinary care',
+    healthCertId: '985141004829103',
+    vaccinations: 'Vaccinated  under licensed veterinary care',
     temperament: ['Alert', 'Quick learner', 'Eager to please', 'Calm lap dog'],
     description:
       'Bella has vibrant red dense curls, short nose bridge, and a delightfully cheerful attitude. Teacup poodles are renowned for their high intelligence and allergy-friendly coats.',
@@ -131,12 +131,12 @@ export const puppies: Puppy[] = [
     color: 'Caramel Toffee & White Chest',
     estimatedWeight: '2.5 - 3.2 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829104',
+    healthCertId: '985141004829104',
     vaccinations: 'Completed core puppy vaccination series',
     temperament: ['Outgoing', 'Family-friendly', 'Companion dog', 'Playful'],
     description:
       'Charlie is a heart-melting Cavapoo boy with classic teddy bear features and an affectionate temperament that makes him ideal for families with children or other pets in Dubai apartments.',
-    features: ['Showroom Available', 'Child-Friendly', 'Dewormed & Microchipped', 'Same-Day Home Adoption'],
+    features: ['Showroom Available', 'Child-Friendly', 'Dewormed ', 'Same-Day Home Adoption'],
   },
   {
     id: 'b39adb3f-eace-45af-a2e8-425de01ffc50',
@@ -158,8 +158,8 @@ export const puppies: Puppy[] = [
     color: 'Pure White Cloud',
     estimatedWeight: '1.6 - 2.0 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829105',
-    vaccinations: 'Dewormed, Microchipped, Vaccinated',
+    healthCertId: '985141004829105',
+    vaccinations: 'Dewormed, Vaccinated',
     temperament: ['Gentle', 'Energetic', 'Loyal', 'Biddable'],
     description:
       'Milo is a pristine white toy poodle with adorable button nose and alert, playful disposition. He loves gentle belly rubs and learning new puppy tricks.',
@@ -185,7 +185,7 @@ export const puppies: Puppy[] = [
     color: 'Blush Cream & Honey',
     estimatedWeight: '1.7 - 2.1 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829106',
+    healthCertId: '985141004829106',
     vaccinations: 'Full course puppy vaccinations completed',
     temperament: ['Sweet-natured', 'Quiet', 'Affectionate', 'Lap snuggle'],
     description:
@@ -212,12 +212,12 @@ export const puppies: Puppy[] = [
     color: 'Orange Sable & Cream',
     estimatedWeight: '1.3 - 1.7 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829107',
+    healthCertId: '985141004829107',
     vaccinations: 'All essential vaccinations + Rabies + Titre test ready',
     temperament: ['Spirited', 'Fluffy', 'Charismatic', 'Confident'],
     description:
       'Coco looks like a literal baby fox teddy bear. Dense, plush double coat, short snub snout, and high tail carriage. A show-stopper teacup Pomeranian.',
-    features: ['Micro Size Guarantee', 'Teddy Bear Face Structure', 'Vaccinated & Chipped', 'Door-to-Door UAE Delivery'],
+    features: ['Micro Size Guarantee', 'Teddy Bear Face Structure', 'Vaccinated ', 'Door-to-Door UAE Delivery'],
   },
   {
     id: 'e486e544-f1fd-48f9-8ba0-f556d7ee44e7',
@@ -239,7 +239,7 @@ export const puppies: Puppy[] = [
     color: 'Rich Copper Chestnut',
     estimatedWeight: '2.2 - 2.8 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829108',
+    healthCertId: '985141004829108',
     vaccinations: 'Current on all vaccinations & deworming',
     temperament: ['Cuddly', 'Curious', 'Easygoing', 'Loyal'],
     description:
@@ -266,7 +266,7 @@ export const puppies: Puppy[] = [
     color: 'Tri-color Mahogany & Cream',
     estimatedWeight: '1.8 - 2.5 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829109',
+    healthCertId: '985141004829109',
     vaccinations: 'Vaccinated, dewormed, vet checked',
     temperament: ['Gentle', 'Placid', 'Sweet', 'Great with kids'],
     description:
@@ -293,8 +293,8 @@ export const puppies: Puppy[] = [
     color: 'Golden Honey & White',
     estimatedWeight: '2.0 - 2.7 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829110',
-    vaccinations: 'Vaccinated & microchipped',
+    healthCertId: '985141004829110',
+    vaccinations: 'Vaccinated ',
     temperament: ['Playful', 'Loving', 'Noble', 'Content'],
     description:
       'Winston is a dapper little boy with a gorgeous symmetrical mask and fluffy coat. He is very friendly with other pets and adores attention.',
@@ -320,7 +320,7 @@ export const puppies: Puppy[] = [
     color: 'Vanilla Cream',
     estimatedWeight: '1.5 - 1.9 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829111',
+    healthCertId: '985141004829111',
     vaccinations: 'Up to date with all core vaccines',
     temperament: ['Sunny', 'Affectionate', 'Teacup Size', 'Playful'],
     description:
@@ -347,8 +347,8 @@ export const puppies: Puppy[] = [
     color: 'Snow White & Champagne',
     estimatedWeight: '1.2 - 1.6 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829112',
-    vaccinations: 'Microchipped & Vaccinated',
+    healthCertId: '985141004829112',
+    vaccinations: 'Vaccinated',
     temperament: ['Joyful', 'Tiny', 'Curious', 'Affectionate'],
     description:
       'Bailey is an ultra-rare micro Korean Pomeranian weighing under 500 grams at 8 weeks. Extremely compact bone structure with luxurious double coat.',
@@ -374,7 +374,7 @@ export const puppies: Puppy[] = [
     color: 'Pure White',
     estimatedWeight: '1.4 - 1.8 kg',
     birthDate: 'September 2026',
-    microchipId: '985141004829113',
+    healthCertId: '985141004829113',
     vaccinations: 'Current on puppy schedule',
     temperament: ['Bold', 'Loving', 'Fluffy', 'Photogenic'],
     description:
@@ -401,12 +401,12 @@ export const puppies: Puppy[] = [
     color: 'Warm Red Mahogany',
     estimatedWeight: '1.8 - 2.4 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829114',
-    vaccinations: 'Fully vaccinated & microchipped',
+    healthCertId: '985141004829114',
+    vaccinations: 'Fully vaccinated ',
     temperament: ['Brainy', 'Agile', 'Loyal', 'Warm'],
     description:
       'Leo is exceptionally smart and already responds to his name and gentle cues. His rich red coat will remain vibrant throughout his adult life.',
-    features: ['Showroom Available', 'Non-Allergenic', 'Microchip ID Registered', 'Complimentary Vet Health Check'],
+    features: ['Showroom Available', 'Non-Allergenic', 'Health ID Registered', 'Complimentary Vet Health Check'],
   },
   {
     id: 'a9b8c7d6-e5f4-4321-8765-abcdef123456',
@@ -428,7 +428,7 @@ export const puppies: Puppy[] = [
     color: 'Exotic Blue Merle & Tan',
     estimatedWeight: '1.5 - 2.0 kg',
     birthDate: 'August 2026',
-    microchipId: '985141004829115',
+    healthCertId: '985141004829115',
     vaccinations: 'Full international veterinary immunization record',
     temperament: ['Exclusive', 'Playful', 'Loving', 'Stunning'],
     description:
