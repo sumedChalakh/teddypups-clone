@@ -1,33 +1,32 @@
 import Link from 'next/link';
-import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 
-const heroPuppies = [
-  { img: '/puppies/real/hero-pup-1.jpg', label: 'Teacup Maltipoo', tag: 'Available' },
-  { img: '/puppies/real/hero-pup-2.jpg', label: 'Korean Teacup Pomeranian', tag: 'With video' },
-  { img: '/puppies/real/hero-pup-3.jpg', label: 'Cavapoo Baby', tag: 'Ready to fly' },
-  { img: '/puppies/real/hero-pup-4.jpg', label: 'Cream Teacup Pom', tag: 'Available' },
-  { img: '/puppies/real/hero-pup-5.jpg', label: 'Toy Poodle Pair', tag: 'Loved' },
-  { img: '/puppies/real/hero-pup-6.jpg', label: 'Mini Maltipoo', tag: 'Available' },
+const heroLineup = [
+  { img: '/puppies/hero/hero-1.jpg', breed: 'Teacup Maltipoo', tag: 'Available' },
+  { img: '/puppies/hero/hero-2.jpg', breed: 'Korean Teacup Pomeranian', tag: 'With video' },
+  { img: '/puppies/hero/hero-3.jpg', breed: 'Cavapoo Baby', tag: 'Ready to fly' },
+  { img: '/puppies/hero/hero-4.jpg', breed: 'Cream Teacup Pom', tag: 'Available' },
+  { img: '/puppies/hero/hero-5.jpg', breed: 'Toy Poodle Pair', tag: 'Loved' },
+  { img: '/puppies/hero/hero-6.jpg', breed: 'Mini Maltipoo', tag: 'Available' },
 ];
 
 export function HeroScene() {
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-between pt-10 md:pt-16 pb-0 overflow-hidden">
-      {/* Floating decorative paw prints */}
+    <section className="relative min-h-[92vh] flex flex-col justify-between pt-8 sm:pt-14 pb-0 overflow-hidden bg-gradient-to-b from-[#fffdf8] to-[#fff1d8]">
+      {/* Subtle decorative paw prints */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
-        <span className="absolute top-12 left-10 text-2xl text-teddy-amber/30 animate-pulse">🐾</span>
-        <span className="absolute top-28 right-16 text-xl text-teddy-rust/20">🐾</span>
-        <span className="absolute top-1/3 left-1/4 text-lg text-teddy-gold/25">🐾</span>
+        <span className="absolute top-10 left-8 text-2xl text-[#f2be6b]/35 animate-pulse">🐾</span>
+        <span className="absolute top-24 right-12 text-xl text-[#a24a1a]/25">🐾</span>
+        <span className="absolute top-1/3 left-1/4 text-lg text-[#f2be6b]/30">🐾</span>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 text-center z-10">
-        {/* Curving subtitle tag matching recording */}
+      <div className="max-w-6xl mx-auto px-4 text-center z-10 w-full">
+        {/* Curving subtitle tag */}
         <div className="inline-block mb-3">
-          <span className="font-hand text-xl md:text-2xl text-teddy-rust tracking-wide relative">
+          <span className="font-hand text-xl sm:text-2xl text-[#a24a1a] tracking-wide relative inline-block">
             every puppy is family
             <svg
-              className="absolute -bottom-1.5 left-0 w-full h-2 text-teddy-gold/60"
+              className="absolute -bottom-1.5 left-0 w-full h-2 text-[#f2be6b]/70"
               viewBox="0 0 100 8"
               preserveAspectRatio="none"
               aria-hidden="true"
@@ -37,11 +36,11 @@ export function HeroScene() {
           </span>
         </div>
 
-        <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-teddy-brown leading-[1.08] tracking-tight max-w-4xl mx-auto mb-6">
+        <h1 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-[#2a170e] leading-[1.08] tracking-tight max-w-4xl mx-auto mb-5">
           Premium teacup <br className="hidden sm:inline" /> puppies in Dubai
         </h1>
 
-        <p className="font-sans text-base sm:text-lg md:text-xl text-teddy-brown/80 max-w-2xl mx-auto leading-relaxed mb-8">
+        <p className="font-sans text-base sm:text-lg md:text-xl text-[#2a170e]/80 max-w-2xl mx-auto leading-relaxed mb-8">
           Meet your new best friend in our Dubai showroom, or order a rare miniature breed from trusted breeders worldwide.
         </p>
 
@@ -49,7 +48,7 @@ export function HeroScene() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/puppies"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-teddy-rust hover:bg-teddy-rust-deep text-teddy-cream font-medium shadow-md hover:shadow-lg transition-all duration-200"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#a24a1a] hover:bg-[#853c15] text-[#fffdf8] font-semibold text-base shadow-md hover:shadow-lg transition-all duration-200"
           >
             View available puppies
           </Link>
@@ -57,70 +56,103 @@ export function HeroScene() {
             href={siteConfig.whatsappUrl()}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full border-2 border-teddy-brown text-teddy-brown hover:bg-teddy-brown/5 font-medium transition-colors"
+            className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-3.5 rounded-full border-2 border-[#2a170e] text-[#2a170e] hover:bg-[#2a170e]/5 font-semibold text-base transition-colors"
           >
             Enquire on WhatsApp
           </a>
         </div>
       </div>
 
-      {/* Hero Scalloped Quilted Fence with Puppy Arches & Peeking Mascot */}
+      {/* Row of Equal-Sized Arched Windows across 375px to 1440px */}
       <div className="relative mt-8 sm:mt-12 w-full">
-        {/* Quilted diamond grid background behind arches */}
-        <div className="relative mx-auto max-w-6xl px-4 flex items-end justify-center gap-2 sm:gap-4 overflow-hidden pt-8">
-          {heroPuppies.slice(0, 3).map((pup, i) => (
-            <div
-              key={i}
-              className="relative w-28 sm:w-40 md:w-48 h-36 sm:h-52 md:h-60 rounded-t-full border-4 border-teddy-brown bg-teddy-sand/40 overflow-hidden shadow-inner flex-shrink-0 group"
-            >
-              <Image
-                src={pup.img}
-                alt={pup.label}
-                fill
-                sizes="(max-width: 640px) 112px, 192px"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <span className="absolute top-2 right-2 bg-teddy-cream/90 text-teddy-brown text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full shadow">
-                {pup.tag}
-              </span>
-            </div>
-          ))}
+        {/* Horizontal scroll container on mobile, centered flex row on desktop */}
+        <div className="w-full overflow-x-auto no-scrollbar px-4 sm:px-6">
+          <div className="flex items-end justify-center min-w-max sm:min-w-0 sm:max-w-7xl mx-auto gap-3 sm:gap-4 pb-2">
+            
+            {/* Left 3 Arches */}
+            {heroLineup.slice(0, 3).map((pup, i) => (
+              <div key={i} className="flex flex-col items-center group flex-shrink-0">
+                {/* Speech bubble badge with full text */}
+                <div className="mb-2 bg-[#fffdf8] border border-[#2a170e]/20 text-[#2a170e] text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap opacity-90 group-hover:opacity-100 transition-opacity">
+                  {pup.breed}
+                </div>
+                
+                {/* Arched Window: Fixed equal proportions, rounded-t-full */}
+                <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                  <img
+                    src={pup.img}
+                    alt={pup.breed}
+                    className="w-full h-full object-cover object-center"
+                    loading="eager"
+                  />
+                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+                    {pup.tag}
+                  </span>
+                </div>
+              </div>
+            ))}
 
-          {/* Center mascot dog face peeking over the fence */}
-          <div className="relative -mb-1 w-24 sm:w-36 md:w-44 h-32 sm:h-44 md:h-52 flex-shrink-0 z-20 flex flex-col items-center justify-end">
-            <div className="relative w-full h-full">
-              <Image
-                src="/brand/real/mascot-face.png"
-                alt="TeddyPups Mascot"
-                fill
-                sizes="176px"
-                className="object-contain animate-bounce-gentle"
-              />
+            {/* Mascot Dog Face peeking over the fence in center */}
+            <div className="flex flex-col items-center flex-shrink-0 z-20 pb-1">
+              <div className="relative w-24 sm:w-32 md:w-36 h-36 sm:h-48 md:h-56 flex items-end justify-center">
+                <svg viewBox="0 0 160 160" className="w-full h-full overflow-visible" role="img" aria-label="Teddy mascot peeking">
+                  {/* Fluffy ears */}
+                  <circle cx="28" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
+                  <circle cx="132" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
+                  {/* Head */}
+                  <circle cx="80" cy="78" r="50" fill="#fbe3b4" stroke="#2a170e" strokeWidth="4.5" />
+                  {/* Head curls */}
+                  <circle cx="58" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
+                  <circle cx="80" cy="30" r="18" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
+                  <circle cx="102" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
+                  {/* Eyes */}
+                  <circle cx="62" cy="74" r="6.5" fill="#2a170e" />
+                  <circle cx="64" cy="71" r="2.2" fill="#ffffff" />
+                  <circle cx="98" cy="74" r="6.5" fill="#2a170e" />
+                  <circle cx="100" cy="71" r="2.2" fill="#ffffff" />
+                  {/* Muzzle */}
+                  <ellipse cx="80" cy="94" rx="20" ry="14" fill="#ffffff" />
+                  <path d="M72 88 Q80 84 88 88 Q80 96 72 88 Z" fill="#2a170e" />
+                  <path d="M80 92 Q80 100 75 102 M80 100 Q85 102 85 100" stroke="#2a170e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+                  {/* Cheeks */}
+                  <ellipse cx="50" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
+                  <ellipse cx="110" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
+                  {/* Little Paws */}
+                  <ellipse cx="54" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
+                  <ellipse cx="106" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
+                </svg>
+              </div>
             </div>
+
+            {/* Right 3 Arches */}
+            {heroLineup.slice(3, 6).map((pup, i) => (
+              <div key={i} className="flex flex-col items-center group flex-shrink-0">
+                {/* Speech bubble badge with full text */}
+                <div className="mb-2 bg-[#fffdf8] border border-[#2a170e]/20 text-[#2a170e] text-[11px] sm:text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm whitespace-nowrap opacity-90 group-hover:opacity-100 transition-opacity">
+                  {pup.breed}
+                </div>
+                
+                {/* Arched Window: Fixed equal proportions, rounded-t-full */}
+                <div className="relative w-28 sm:w-36 md:w-44 lg:w-48 h-40 sm:h-52 md:h-64 rounded-t-full border-4 border-[#2a170e] bg-[#fbe3b4]/60 overflow-hidden shadow-lg transition-transform duration-300 group-hover:-translate-y-1">
+                  <img
+                    src={pup.img}
+                    alt={pup.breed}
+                    className="w-full h-full object-cover object-center"
+                    loading="eager"
+                  />
+                  <span className="absolute top-2 right-2 bg-[#fffdf8]/95 text-[#2a170e] text-[9px] sm:text-[10px] font-bold px-2 py-0.5 rounded-full shadow">
+                    {pup.tag}
+                  </span>
+                </div>
+              </div>
+            ))}
+
           </div>
-
-          {heroPuppies.slice(3, 6).map((pup, i) => (
-            <div
-              key={i}
-              className="relative w-28 sm:w-40 md:w-48 h-36 sm:h-52 md:h-60 rounded-t-full border-4 border-teddy-brown bg-teddy-sand/40 overflow-hidden shadow-inner flex-shrink-0 group"
-            >
-              <Image
-                src={pup.img}
-                alt={pup.label}
-                fill
-                sizes="(max-width: 640px) 112px, 192px"
-                className="object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <span className="absolute top-2 right-2 bg-teddy-cream/90 text-teddy-brown text-[10px] sm:text-xs font-semibold px-2 py-0.5 rounded-full shadow">
-                {pup.tag}
-              </span>
-            </div>
-          ))}
         </div>
 
-        {/* Quilted scalloped fence hem */}
-        <div className="w-full bg-[#fbe3b4] border-t-4 border-teddy-brown/20 py-4 text-center">
-          <div className="max-w-6xl mx-auto px-4 flex justify-between items-center text-xs font-medium text-teddy-brown/60">
+        {/* Quilted scalloped fence hem banner */}
+        <div className="w-full bg-[#fbe3b4] border-t-4 border-[#2a170e]/20 py-3.5 text-center shadow-inner">
+          <div className="max-w-6xl mx-auto px-4 flex justify-between items-center text-xs font-semibold text-[#2a170e]/75">
             <span>🐾 Dubai Showroom Available</span>
             <span className="hidden sm:inline">✨ Korea Direct Import with Health Guarantee</span>
             <span>✈️ Worldwide Safe Delivery</span>

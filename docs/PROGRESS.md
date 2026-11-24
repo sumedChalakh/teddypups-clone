@@ -60,3 +60,10 @@
 - [x] Added basket mascot graphic to the Footer
 - [x] Added `PawTrailCanvas` cursor effect for paw tracks on mouse movement
 - [x] Rebuilt with `npm run build` (27/27 static pages passing)
+
+## Bug Fixes & Parity Alignment (2026-11-24)
+- [x] Bug 1: Footer text contrast fixed (>7.5:1 WCAG ratio with `#fffdf8`/`#f2be6b` on `#24130b`), added crescent moon, glowing stars, and woven basket puppy SVG
+- [x] Bug 2: Fixed polaroid images in Happy Families scene by placing real photographs in `public/families/` and rendering with authentic top masking tape on a wood plank shelf
+- [x] Bug 3: Rebuilt Hero scene lineup with equal-size arched windows, responsive 375px–1440px layout, and full-text breed bubbles
+- [x] Bug 4: Implemented horizontal scroll for all 15 puppies in "Meet the pups" with visible photos, names, breeds, ages, and ending in "Meet them all" collection arch
+- [x] Ran `npm run lint` and `npm run build` (27/27 static pages generated with 0 errors)

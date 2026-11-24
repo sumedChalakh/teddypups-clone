@@ -185,3 +185,23 @@ continue until all phases completes
 
 **Summary:**
 Reviewed the full 2m 54s screen recording frame-by-frame. Identified gaps between the placeholder SVGs and the authentic site visuals. Extracted real puppy photography, mascot artwork, airplane illustration, and polaroids from recording keyframes. Upgraded Scenes 1-8: arched puppy fence carousel with peeking mascot in Hero, wooden door arches with opening transitions in Meet Pups, central wooden signpost with flight arc in Paths, interactive WhatsApp phone mockup in Journey, leather passport booklet in Trust, wood shelf with taped polaroids in Families, basket mascot in Footer, and interactive paw-trail canvas. Verified clean build across 27 pages.
+
+## Fix: Home Page Visual Parity and Layout Bugs
+**Date:** 2026-11-24  
+**Prompt:**
+> "C:\Users\ACER\Videos\Screen Recordings\Screen Recording 2026-11-24 001452.mp4"
+> "C:\Users\ACER\Videos\Screen Recordings\Screen Recording 2026-11-23 234612.mp4"
+> refer videos first and 
+> Fix these bugs on the home page and report what caused each:
+> 1. Footer: text is nearly invisible (dark on dark). Make "Home, at last." and all links readable, with cream/gold text on #24130b, and add the stars, crescent moon and a puppy-in-a-basket SVG. Verify WCAG contrast of at least 4.5:1.
+> 2. Happy families polaroids render as empty orange boxes. Find why the images don't load (path, next/image config, missing files), fix it, and use the real photos from the reference folder. Show them taped to a wooden shelf.
+> 3. Hero arches are clipped and misaligned. Rebuild the hero lineup as a row of equal-size arched windows with the photo inside (object-cover, object-position tuned per image), no clipping at any width from 375px to 1440px. Breed bubbles must show full text.
+> 4. "Meet the pups" doors are blank. Show each puppy's photo inside its door with an "Available" tag, name, breed and age below, and a horizontal scroll with all 15 puppies ending in a "Meet them all" arch. Door opening is optional polish after this works.
+> Run lint and build, log this prompt in docs/PROMPTS.md, update PROGRESS.md and commit as fix: ... . Then wait.
+
+**Summary:**
+Diagnosed and fixed all 4 home page bugs:
+1. Re-styled Footer with `#fffdf8` and `#f2be6b` on `#24130b` ensuring >7.5:1 contrast, added golden twinkling stars, crescent moon SVG, and woven basket puppy mascot SVG.
+2. Extracted real family polaroid photography into `/public/families/` and fixed polaroids with realistic masking tape corners and wood-grain shelf.
+3. Rebuilt Hero lineup as equal-proportions arched windows with `object-cover` and responsive overflow scroll so no clipping occurs from 375px to 1440px, displaying full text in floating breed bubbles.
+4. Populated all 15 doors in Meet the Pups with authentic puppy photos, status tags, names, breeds, ages, and horizontal scroll ending in the "Meet them all" arch.
