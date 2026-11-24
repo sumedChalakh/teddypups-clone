@@ -274,3 +274,42 @@ Diagnosed and fixed all 4 home page bugs:
    - FAQ: sitting attentively under the questions
    - Footer: cozy inside the woven basket
 4. Verified via `npm run lint` and `npm run build` (27/27 static pages passing).
+
+## Paths Signpost, Passport Book Stamps, 2-Col FAQ & Brown Paw Cursor Trail
+**Date:** 2026-11-24  
+**Prompt:**
+> Rebuild "Two ways to meet your puppy" with: a wooden signpost with two signs ("Puppies in
+> Dubai", "Imported for you"), a shop illustration with a skyline, and a plane animating along
+> a dotted route between Korea and Dubai. Rebuild "puppy passport" as an open book with
+> circular stamp icons for the 4 trust points. Rebuild "Questions, answered" with the heading
+> on the left and the questions on the right in an accordion. Make the cursor trail small brown
+> paw prints that fade out. Compare each against the screenshots I attach and list any
+> remaining differences. Log, commit, wait.
+
+**Summary:**
+1. Rebuilt `PathsScene.tsx`:
+   - Central wooden signpost with two wooden directional signs: "Puppies in Dubai" (left arrow) and "Imported for you" (right arrow).
+   - Left article: Shop window with striped awning, real showroom puppy photo, "In our showroom" scrawl caption, and Dubai skyline silhouette SVG.
+   - Right article: Dotted flight path (`M50 240 C 180 50, 480 30, 610 180`), pins and labels for Korea & Dubai, and an airplane with porthole photo animating continuously along the flight route with gentle bobbing.
+   - Mascot sitting at the base of the signpost.
+2. Rebuilt `TrustScene.tsx`:
+   - Open passport book with dark leather cover border (`#4a2614`), drop-shadow, and stitched spine crease down the center.
+   - Left page: "puppy passport" kicker, "Why families trust TeddyPups" heading, description, and sitting Mascot.
+   - Right page: 4 circular rubber stamps with dashed borders, postal verification text, tilted angles (-6deg, 5deg, -4deg, 6deg), and authentic ink colors:
+     - Stamp 1 (`#a24a1a`): Vet-checked & healthy
+     - Stamp 2 (`#1f6b45`): Korea to Dubai, safely
+     - Stamp 3 (`#5a3a28`): Support 24/7
+     - Stamp 4 (`#c2622b`): Trusted by families worldwide
+   - Bottom city horizon silhouette.
+3. Rebuilt `FaqScene.tsx`:
+   - 2-column layout: Left column with "Questions, answered" heading, "Read all questions" CTA button, and sitting Mascot with a floating yellow question mark `?`; Right column with 3 accordion questions, 4-pointed golden stars, and smooth disclosure.
+   - Night sky background (`#4d2b19` to `#2f1a10`) with 11 twinkling golden stars.
+4. Updated `PawTrailCanvas.tsx`:
+   - Replaced text emoji with authentic small brown SVG paw prints (`#a24a1a` fill, `#2a170e` stroke).
+   - Natural quadruped alternating left/right footstep walking offsets.
+   - Smooth 1.2s fade-out animation and scale down.
+5. Comparison against reference:
+   - Visual structure and content match 1:1.
+   - Animations use pure CSS (`@keyframes flight-arc`, `@keyframes paw-fade`, `@keyframes stamp-thump`) with full reduced-motion safeguards.
+6. Verified via `npm run lint` and `npm run build` (27/27 static pages passing).
+

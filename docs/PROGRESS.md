@@ -106,3 +106,23 @@
   - Under FAQ accordion
   - In a basket in Footer
 - [x] Verified via `npm run lint` and `npm run build` (27/27 static routes generated)
+
+## Paths Signpost, Passport Stamps, 2-Col FAQ & Paw Trail (2026-11-24)
+- [x] Rebuilt "Two ways to meet your puppy":
+  - Central wooden signpost with directional planks ("Puppies in Dubai" & "Imported for you")
+  - Shop window with striped awning, real showroom puppy photo, "In our showroom" scrawl, and Dubai skyline SVG silhouette
+  - Dotted flight arc between Korea and Dubai with smoothly animating airplane and porthole puppy photo
+  - Sitting Mascot at the signpost base
+- [x] Rebuilt "puppy passport":
+  - Open booklet design with leather cover border, drop shadow, and center stitched spine crease
+  - Left page with "puppy passport" kicker, heading, description, and sitting Mascot
+  - Right page with 4 circular rubber stamps (Vet-checked & healthy, Korea to Dubai safely, Support 24/7, Trusted by families worldwide) with distinct ink colors and authentic icons
+  - Bottom city horizon silhouette
+- [x] Rebuilt "Questions, answered":
+  - 2-column layout: Left column with heading, "Read all questions" CTA, and Mascot with floating yellow question mark `?`; Right column with 3 accordion questions, 4-pointed golden stars, and expandable answers
+  - Twinkling stars in night sky background
+- [x] Rebuilt cursor trail:
+  - Small brown SVG paw prints (`#a24a1a` / `#2a170e`) with alternating left/right footstep offsets
+  - Smooth 1.2s fade-out animation and scale down
+- [x] Verified build (`npm run build` -> 27/27 static pages)
+

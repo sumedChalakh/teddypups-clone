@@ -66,3 +66,65 @@ label {
 ::-webkit-scrollbar-thumb:hover {
   background: #c2622b;
 }
+
+/* Flight Path Plane Animation */
+@keyframes flight-arc {
+  0% {
+    transform: translate(110px, 190px) rotate(-16deg);
+  }
+  30% {
+    transform: translate(250px, 95px) rotate(-6deg);
+  }
+  60% {
+    transform: translate(400px, 75px) rotate(4deg);
+  }
+  100% {
+    transform: translate(520px, 140px) rotate(14deg);
+  }
+}
+
+.animate-flight-arc {
+  animation: flight-arc 6s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+/* Rubber Stamp Thump Animation */
+@keyframes stamp-thump {
+  0% {
+    opacity: 0;
+    transform: scale(1.25) rotate(var(--tilt, -5deg));
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.96) rotate(var(--tilt, -5deg));
+  }
+  100% {
+    opacity: 0.95;
+    transform: scale(1) rotate(var(--tilt, -5deg));
+  }
+}
+
+.animate-stamp {
+  animation: stamp-thump 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* Paw Print Fade Out Animation */
+@keyframes paw-fade {
+  0% {
+    opacity: 0.75;
+    scale: 1;
+  }
+  60% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.75;
+  }
+}
+
+.animate-paw-fade {
+  animation: paw-fade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+
