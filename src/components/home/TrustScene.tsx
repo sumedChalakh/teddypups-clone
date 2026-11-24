@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Mascot } from '@/components/ui/Mascot';
 
 const passportPoints = [
   {
@@ -110,16 +110,9 @@ export function TrustScene() {
                 </p>
               </div>
 
-              {/* Mascot puppy in the passport */}
+              {/* Mascot: Beside the passport book */}
               <div className="mt-4 flex justify-end">
-                <div className="relative w-20 h-16">
-                  <Image
-                    src="/brand/real/mascot-standing.png"
-                    alt="TeddyPups Mascot"
-                    fill
-                    className="object-contain"
-                  />
-                </div>
+                <Mascot state="blinking" size={100} facing="left" />
               </div>
             </div>
           </div>

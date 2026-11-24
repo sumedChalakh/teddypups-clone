@@ -91,3 +91,18 @@
 - [x] Scene 8 (Home CTA): `#2f1a10` -> `#24130b` (cream text `#fffdf8`)
 - [x] `QuiltDivider` scalloped SVG between every scene matching next section's top color with 0px gaps
 - [x] Verified build (`npm run build` -> 27/27 static pages)
+
+## Mascot Component & Animations (2026-11-24)
+- [x] Created `src/components/ui/Mascot.tsx` with pure inline SVG (< 4 KB, golden/apricot puppy)
+- [x] Implemented CSS keyframe animations (tail wag, eye blink, walk bob, run cycle, peek bob)
+- [x] Disabled animations with `prefers-reduced-motion: reduce`
+- [x] Placed mascot across all scenes:
+  - Hero center peeking over quilt
+  - Running along floor under "Meet the pups"
+  - Beside signpost in Paths
+  - Beside phone in Journey
+  - Beside passport booklet in Trust
+  - On the wooden shelf in Happy families
+  - Under FAQ accordion
+  - In a basket in Footer
+- [x] Verified via `npm run lint` and `npm run build` (27/27 static routes generated)

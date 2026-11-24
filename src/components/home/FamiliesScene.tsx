@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Mascot } from '@/components/ui/Mascot';
 
 const polaroids = [
   { img: '/families/family-1.jpg', caption: 'Lulu 🧸 with her new mummy ❤️', rot: '-rotate-2', tapeColor: '#f6d79a' },
@@ -19,7 +20,7 @@ export function FamiliesScene() {
             <h2 className="font-display font-black text-4xl sm:text-5xl md:text-6xl text-[#fffdf8] leading-tight">
               Happy families &amp; puppies
             </h2>
-            <p className="font-sans text-base sm:text-lg text-[#fffdf8]/85 max-w-xl mt-3 leading-relaxed">
+            <p className="font-sans text-base sm:text-lg text-[#fbe3b4]/90 max-w-xl mt-3 leading-relaxed">
               We are truly honored to see our puppies become cherished members of loving families. These heartwarming moments have been shared by our valued clients who welcomed a Teddy Pup into their homes and hearts.
             </p>
           </div>
@@ -42,7 +43,7 @@ export function FamiliesScene() {
           </span>
         </div>
 
-        {/* Wood Shelf Wall with Taped Polaroid Photos */}
+        {/* Wood Shelf Wall with Taped Polaroid Photos & Mascot on the shelf */}
         <div className="relative bg-[#2e190e] border-t-8 border-b-8 border-[#1f1008] rounded-3xl p-6 sm:p-10 shadow-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 relative z-10">
             {polaroids.map((item, idx) => (
@@ -74,6 +75,11 @@ export function FamiliesScene() {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Mascot: Sitting happily on the wooden shelf */}
+          <div className="mt-8 flex justify-center items-center">
+            <Mascot state="wagging" size={110} facing="right" />
           </div>
         </div>
       </div>

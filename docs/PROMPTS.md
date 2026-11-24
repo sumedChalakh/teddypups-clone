@@ -249,3 +249,28 @@ Diagnosed and fixed all 4 home page bugs:
    - Scene 8 (Final CTA / Home): `#2f1a10` to `#24130b` (switched text to `#fffdf8` cream)
 2. Linked consecutive scenes with scalloped `QuiltDivider` SVG elements whose fill colors match the top color of each following scene, completely eliminating white gaps or seams.
 3. Verified via `npm run lint` and `npm run build` (27/27 static pages compiled successfully).
+
+## Cartoon Mascot Component & Scene Placement
+**Date:** 2026-11-24  
+**Prompt:**
+> Create a Mascot component: an inline SVG cartoon golden/apricot puppy with these states:
+> sitting, walking, running, wagging tail, blinking. Place it in each scene as in the original
+> (hero center peeking over the quilt, running along the floor under "Meet the pups", next to
+> the signpost, beside the phone, beside the passport book, on the shelf in happy families,
+> under FAQ, in a basket in the footer). Animate with CSS keyframes only (no heavy libraries);
+> disable all motion with prefers-reduced-motion. Keep it under 8 KB of SVG per state. Log,
+> commit, wait.
+
+**Summary:**
+1. Created `src/components/ui/Mascot.tsx`: a lightweight inline SVG cartoon golden/apricot puppy (< 4 KB total) supporting states: `sitting`, `walking`, `running`, `wagging`, `blinking`, `peeking`, and `basket`.
+2. Implemented pure CSS keyframe animations for tail wagging, eye blinking, bobbing, and limb motion, with full `@media (prefers-reduced-motion: reduce)` support that disables all motion.
+3. Placed the Mascot across all scenes matching the original:
+   - Hero: peeking over quilt in center
+   - Meet the pups: running along the wooden floor
+   - Paths: wagging tail next to the directional signpost
+   - Journey: sitting beside the WhatsApp smartphone
+   - Passport/Trust: blinking beside the open passport booklet
+   - Happy families: sitting and wagging on the polaroid shelf
+   - FAQ: sitting attentively under the questions
+   - Footer: cozy inside the woven basket
+4. Verified via `npm run lint` and `npm run build` (27/27 static pages passing).

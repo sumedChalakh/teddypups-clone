@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import { Mascot } from '@/components/ui/Mascot';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -30,7 +31,7 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-12 items-start mb-16">
           
-          {/* Column 1: Brand & Puppy in Basket SVG */}
+          {/* Column 1: Brand & Puppy in Basket SVG using Mascot component */}
           <div className="md:col-span-5 flex flex-col justify-between">
             <div>
               <h2 className="font-display font-black text-4xl sm:text-5xl text-[#fffdf8] tracking-tight leading-tight">
@@ -41,60 +42,9 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Cute Puppy in a Woven Basket SVG matching reference vector */}
-            <div className="mt-8 relative w-56 h-40">
-              <svg viewBox="0 0 240 180" className="w-full h-full overflow-visible" role="img" aria-label="Puppy cozy in a woven basket">
-                {/* Woven Basket Body */}
-                <ellipse cx="120" cy="140" rx="75" ry="18" fill="#2a170e" opacity="0.3" />
-                
-                {/* Puppy Mascot Peeking */}
-                <g transform="translate(120, 95)">
-                  {/* Fluffy ears */}
-                  <ellipse cx="-42" cy="-10" rx="18" ry="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="3.5" transform="rotate(-15 -42 -10)" />
-                  <ellipse cx="42" cy="-10" rx="18" ry="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="3.5" transform="rotate(15 42 -10)" />
-                  
-                  {/* Fluffy head */}
-                  <circle cx="0" cy="-6" r="42" fill="#fbe3b4" stroke="#2a170e" strokeWidth="4" />
-                  
-                  {/* Curls top */}
-                  <circle cx="-16" cy="-44" r="14" fill="#f2be6b" stroke="#2a170e" strokeWidth="3.5" />
-                  <circle cx="0" cy="-48" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="3.5" />
-                  <circle cx="16" cy="-44" r="14" fill="#f2be6b" stroke="#2a170e" strokeWidth="3.5" />
-                  
-                  {/* Cheerful Eyes */}
-                  <circle cx="-14" cy="-8" r="5" fill="#2a170e" />
-                  <circle cx="-12" cy="-10" r="1.8" fill="#ffffff" />
-                  <circle cx="14" cy="-8" r="5" fill="#2a170e" />
-                  <circle cx="16" cy="-10" r="1.8" fill="#ffffff" />
-                  
-                  {/* Cute Muzzle & Nose */}
-                  <ellipse cx="0" cy="8" rx="16" ry="12" fill="#ffffff" />
-                  <path d="M-6 4 Q0 1 6 4 Q0 10 -6 4 Z" fill="#2a170e" />
-                  <path d="M0 6 Q0 12 -4 14 M0 12 Q4 14 4 12" stroke="#2a170e" strokeWidth="2" fill="none" strokeLinecap="round" />
-                  
-                  {/* Blushing cheeks */}
-                  <ellipse cx="-24" cy="4" rx="6" ry="3.5" fill="#f9b9a6" opacity="0.8" />
-                  <ellipse cx="24" cy="4" rx="6" ry="3.5" fill="#f9b9a6" opacity="0.8" />
-                  
-                  {/* Paws over basket edge */}
-                  <ellipse cx="-22" cy="38" rx="10" ry="8" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3" />
-                  <ellipse cx="22" cy="38" rx="10" ry="8" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3" />
-                </g>
-
-                {/* Basket Front with weave pattern */}
-                <path
-                  d="M45 125 C45 165 75 175 120 175 C165 175 195 165 195 125 C195 115 45 115 45 125 Z"
-                  fill="#c27b38"
-                  stroke="#2a170e"
-                  strokeWidth="4"
-                />
-                <ellipse cx="120" cy="122" rx="75" ry="12" fill="#e4a352" stroke="#2a170e" strokeWidth="4" />
-                
-                {/* Basket weave line accents */}
-                <path d="M70 135 Q120 150 170 135" stroke="#8b4a22" strokeWidth="2.5" fill="none" />
-                <path d="M80 152 Q120 162 160 152" stroke="#8b4a22" strokeWidth="2.5" fill="none" />
-                <path d="M90 125 L85 165 M120 125 L120 172 M150 125 L155 165" stroke="#8b4a22" strokeWidth="2.5" fill="none" />
-              </svg>
+            {/* Mascot snug in basket in footer */}
+            <div className="mt-6 relative w-48 h-36">
+              <Mascot state="basket" size={150} facing="right" />
             </div>
           </div>
 

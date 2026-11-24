@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import { Mascot } from '@/components/ui/Mascot';
 
 const heroLineup = [
   { img: '/puppies/hero/hero-1.jpg', breed: 'Korean Teacup Pomeranian', tag: 'Available' },
@@ -92,28 +93,10 @@ export function HeroScene() {
               </div>
             ))}
 
-            {/* Mascot Dog Face peeking over the fence in center */}
+            {/* Mascot: Peeking over the quilt in center */}
             <div className="flex flex-col items-center flex-shrink-0 z-20 pb-1">
-              <div className="relative w-24 sm:w-32 md:w-36 h-36 sm:h-48 md:h-56 flex items-end justify-center">
-                <svg viewBox="0 0 160 160" className="w-full h-full overflow-visible" role="img" aria-label="Teddy mascot peeking">
-                  <circle cx="28" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  <circle cx="132" cy="65" r="26" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  <circle cx="80" cy="78" r="50" fill="#fbe3b4" stroke="#2a170e" strokeWidth="4.5" />
-                  <circle cx="58" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  <circle cx="80" cy="30" r="18" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  <circle cx="102" cy="36" r="16" fill="#f2be6b" stroke="#2a170e" strokeWidth="4" />
-                  <circle cx="62" cy="74" r="6.5" fill="#2a170e" />
-                  <circle cx="64" cy="71" r="2.2" fill="#ffffff" />
-                  <circle cx="98" cy="74" r="6.5" fill="#2a170e" />
-                  <circle cx="100" cy="71" r="2.2" fill="#ffffff" />
-                  <ellipse cx="80" cy="94" rx="20" ry="14" fill="#ffffff" />
-                  <path d="M72 88 Q80 84 88 88 Q80 96 72 88 Z" fill="#2a170e" />
-                  <path d="M80 92 Q80 100 75 102 M80 100 Q85 102 85 100" stroke="#2a170e" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-                  <ellipse cx="50" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
-                  <ellipse cx="110" cy="88" rx="8" ry="4.5" fill="#f9b9a6" opacity="0.8" />
-                  <ellipse cx="54" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
-                  <ellipse cx="106" cy="132" rx="14" ry="10" fill="#fbe3b4" stroke="#2a170e" strokeWidth="3.5" />
-                </svg>
+              <div className="relative w-28 sm:w-36 md:w-40 flex items-end justify-center">
+                <Mascot state="peeking" size={140} className="drop-shadow-sm" />
               </div>
             </div>
 

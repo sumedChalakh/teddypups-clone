@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { Mascot } from '@/components/ui/Mascot';
 
 const originalFaqs = [
   {
@@ -73,6 +74,11 @@ export function FaqScene() {
               </div>
             );
           })}
+        </div>
+
+        {/* Mascot: Under FAQ with curious posture */}
+        <div className="mt-10 flex justify-center">
+          <Mascot state="sitting" size={115} facing="right" />
         </div>
       </div>
     </section>

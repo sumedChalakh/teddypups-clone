@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { siteConfig } from '@/config/site';
+import { Mascot } from '@/components/ui/Mascot';
 
 const breeds = [
   { name: 'Maltipoo', filter: 'maltipoo' },
@@ -149,14 +149,9 @@ export function JourneyScene() {
               </div>
             </div>
 
-            {/* Standing Mascot beside phone */}
-            <div className="absolute -bottom-4 -left-6 sm:-left-10 w-24 h-20">
-              <Image
-                src="/brand/real/mascot-standing.png"
-                alt="TeddyPups Mascot"
-                fill
-                className="object-contain"
-              />
+            {/* Mascot: Sitting beside the phone */}
+            <div className="absolute -bottom-6 -left-8 sm:-left-12">
+              <Mascot state="sitting" size={115} facing="right" />
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { Mascot } from '@/components/ui/Mascot';
 
 export function PathsScene() {
   return (
@@ -79,19 +80,9 @@ export function PathsScene() {
           </div>
         </div>
 
-        {/* Mascot standing at base of signpost */}
+        {/* Mascot standing next to the signpost */}
         <div className="relative mt-8 flex flex-col items-center">
-          <div className="relative w-24 h-20">
-            <Image
-              src="/brand/real/mascot-standing.png"
-              alt="TeddyPups Mascot"
-              fill
-              className="object-contain"
-            />
-          </div>
-          <span className="font-hand text-[#2a170e] text-sm mt-1">
-            Choose your way — showroom visit or global concierge!
-          </span>
+          <Mascot state="wagging" size={110} facing="right" />
         </div>
       </div>
     </section>

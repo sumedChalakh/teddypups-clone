@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { puppies } from '@/data/puppies';
+import { Mascot } from '@/components/ui/Mascot';
 
 const doorColors = [
   '#8b5a3c',
@@ -142,6 +143,23 @@ export function MeetScene() {
             </div>
 
           </div>
+        </div>
+
+        {/* Floor runner with mascot running along the floor under "Meet the pups" */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 mt-4 flex items-center justify-between">
+          <div className="flex items-center gap-4">
+            <Mascot state="running" size={110} facing="right" />
+            <span className="font-hand text-[#2a170e] text-sm sm:text-base hidden sm:inline">
+              Follow along to meet your match!
+            </span>
+          </div>
+
+          <Link
+            href="/puppies"
+            className="font-sans text-xs font-bold text-[#2a170e] hover:text-[#a24a1a] underline"
+          >
+            See all 15 puppies ➔
+          </Link>
         </div>
       </div>
     </section>
