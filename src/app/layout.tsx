@@ -28,9 +28,12 @@ const shantellSans = Shantell_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL('https://teddypups-clone-eta.vercel.app'),
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app',
+  },
   title: {
-    default: `${siteConfig.name} | ${siteConfig.tagline}`,
+    default: 'TeddyPups U.A.E. — Premium teacup puppies in Dubai',
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
@@ -39,12 +42,26 @@ export const metadata: Metadata = {
     apple: '/brand/icon.png',
   },
   openGraph: {
-    title: siteConfig.name,
+    title: 'TeddyPups U.A.E. — Premium teacup puppies in Dubai',
     description: siteConfig.description,
-    url: siteConfig.url,
+    url: 'https://teddypups-clone-eta.vercel.app',
     siteName: siteConfig.name,
     locale: 'en_AE',
     type: 'website',
+    images: [
+      {
+        url: '/brand/logo.png',
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TeddyPups U.A.E. — Premium teacup puppies in Dubai',
+    description: siteConfig.description,
+    images: ['/brand/logo.png'],
   },
 };
 

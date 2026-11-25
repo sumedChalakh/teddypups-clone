@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import { FaqPageView } from '@/components/faq/FaqPageView';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions | TeddyPups U.A.E.',
+  title: 'FAQ',
   description:
-    'Answers to common questions about teacup puppies in Dubai, veterinary health checks, Korean flight arrival, microchipping, and same-day showroom adoption.',
+    'Answers to common questions about teacup puppies in Dubai, veterinary health checks, Korean flight arrival, and same-day showroom adoption.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/faq',
+  },
 };
 
 export default function FaqPage() {

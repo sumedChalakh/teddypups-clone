@@ -7,9 +7,12 @@ import { PawIcon } from '@/components/ui/PawIcon';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
-  title: 'Happy Families & Puppies | TeddyPups U.A.E.',
+  title: 'Happy Families',
   description:
     'Heartwarming adoption stories and genuine photos shared by families who welcomed a Teddy Pup into their homes across Dubai, Abu Dhabi, and the UAE.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/happy-families',
+  },
 };
 
 export default function HappyFamiliesPage() {

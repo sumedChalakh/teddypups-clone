@@ -6,9 +6,12 @@ import { getGoneHomePuppies } from '@/data/puppies';
 import { PawIcon } from '@/components/ui/PawIcon';
 
 export const metadata: Metadata = {
-  title: 'Gone Home Puppies | TeddyPups U.A.E.',
+  title: 'Gone Home',
   description:
     'Celebrate our adopted puppies who have found their forever homes across Dubai, Abu Dhabi, and the UAE.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/gone-home',
+  },
 };
 
 export default function GoneHomePage() {

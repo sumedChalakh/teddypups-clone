@@ -14,9 +14,12 @@ import { siteConfig } from '@/config/site';
 import { PawIcon } from '@/components/ui/PawIcon';
 
 export const metadata: Metadata = {
-  title: 'How It Works & UAE Delivery | TeddyPups U.A.E.',
+  title: 'How It Works',
   description:
     'Learn how our ethical teacup puppy adoption process works in Dubai. From showroom bonding to VIP door-to-door hand delivery across all UAE Emirates.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/how-it-works',
+  },
 };
 
 export default function HowItWorksPage() {

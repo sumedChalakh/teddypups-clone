@@ -153,3 +153,14 @@
 - [x] Matched 15 puppy names, breeds, ages, and genders to `../reference/puppy-site/puppies*.html` / `puppies-9584c7472c68d8.html` with zero invented names
 - [x] `npm run lint` passing with 0 warnings/errors
 - [x] `npm run build` passing with 27/27 static routes generated
+
+
+## SEO Metadata & Contact Alignment (2026-11-25)
+- [x] Configured `metadataBase` to `https://teddypups-clone-eta.vercel.app` in `src/app/layout.tsx`
+- [x] Configured `alternates.canonical` to `https://teddypups-clone-eta.vercel.app` across all pages
+- [x] Removed duplicated brand name suffixes from page titles across all routes
+- [x] Replaced meta description with verbatim text from original reference site
+- [x] Updated footer email to `info@instabizweb.com` matching the decoded reference link
+- [x] Documented canonical, metadata, and email placeholder decisions in `docs/DECISIONS.md`
+- [x] Verified `npm run lint` and `npm run build` (27/27 static pages generated with 0 errors)
+- [x] Committed and pushed to `origin/main`

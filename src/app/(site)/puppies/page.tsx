@@ -3,9 +3,12 @@ import type { Metadata } from 'next';
 import { PuppiesListingView } from '@/components/puppies/PuppiesListingView';
 
 export const metadata: Metadata = {
-  title: 'Available Puppies in Dubai',
+  title: 'Puppies',
   description:
-    'Teacup and teddy bear puppies available now in Dubai and imported from trusted Korean breeders. Every listing features verified health records and genuine puppy photos.',
+    'Teddy bear and teacup puppies in Dubai. Meet local puppies in our Downtown Dubai showroom or bring home a rare breed imported from trusted breeders.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/puppies',
+  },
 };
 
 export default function PuppiesPage() {

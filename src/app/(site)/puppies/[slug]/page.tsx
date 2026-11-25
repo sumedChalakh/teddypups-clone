@@ -20,16 +20,20 @@ export function generateMetadata({ params }: PageProps): Metadata {
 
   if (!puppy) {
     return {
-      title: 'Puppy Not Found | TeddyPups U.A.E.',
+      title: 'Puppy Not Found',
     };
   }
 
   return {
     title: `${puppy.name}, ${puppy.breedName} puppy`,
     description: `Meet ${puppy.name}: ${puppy.breedName}, ${puppy.genderLabel}, ${puppy.age} old, ${puppy.originLabel}. Verified health records and genuine photos from TeddyPups U.A.E.`,
+    alternates: {
+      canonical: `https://teddypups-clone-eta.vercel.app/puppies/${params.slug}`,
+    },
     openGraph: {
       title: `${puppy.name}, ${puppy.breedName} puppy | TeddyPups U.A.E.`,
       description: `Meet ${puppy.name}: ${puppy.breedName}, ${puppy.genderLabel}, ${puppy.age} old. Verified health records and genuine photos from TeddyPups U.A.E.`,
+      url: `https://teddypups-clone-eta.vercel.app/puppies/${params.slug}`,
       images: [
         {
           url: puppy.coverImage,

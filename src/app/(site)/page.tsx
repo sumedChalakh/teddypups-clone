@@ -9,9 +9,11 @@ import { FinalCtaScene } from '@/components/home/FinalCtaScene';
 import { QuiltDivider } from '@/components/home/QuiltDivider';
 
 export const metadata = {
-  title: 'TeddyPups U.A.E. | Premium Teacup Puppies in Dubai',
   description:
-    'Ethically raised teacup and toy puppies in Dubai. Health certified, home-raised, and hand-delivered across the UAE.',
+    'Teddy bear and teacup puppies in Dubai. Meet local puppies in our Downtown Dubai showroom or bring home a rare breed imported from trusted breeders.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app',
+  },
 };
 
 export default function HomePage() {

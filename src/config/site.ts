@@ -1,12 +1,13 @@
 export const siteConfig = {
   name: 'TeddyPups U.A.E.',
   tagline: 'Premium teacup puppies in Dubai',
-  description: 'Ethically raised teacup and toy puppies in Dubai. Health certified, home-raised, and hand-delivered across the UAE.',
-  url: 'https://teddypups.ae',
+  description:
+    'Teddy bear and teacup puppies in Dubai. Meet local puppies in our Downtown Dubai showroom or bring home a rare breed imported from trusted breeders.',
+  url: 'https://teddypups-clone-eta.vercel.app',
   phone: '+971 50 000 0000',
   whatsappNumber: '971500000000',
   whatsappMessage: 'Hello TeddyPups UAE! I am interested in inquiring about your available puppies.',
-  email: 'hello@teddypups.ae',
+  email: 'info@instabizweb.com',
   address: 'Downtown Dubai, UAE',
   openingHours: 'Mon - Sun: 10:00 AM - 9:00 PM',
   navLinks: [

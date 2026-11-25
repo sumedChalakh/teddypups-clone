@@ -369,3 +369,21 @@ commit as fix: ..., then wait.
 5. **Reference Puppy Parity**: Mapped all 15 puppies strictly to `puppies-9584c7472c68d8.html` and `index.html`. Eliminated all invented names ("Luna", "Bella", "Charlie", "Milo", etc.); only authentic reference names ("Max", "Copper", and breed titles) are used.
 6. **Real Puppy Photos**: Downloaded all 15 authentic puppy photos directly into `public/puppies/doors/door-1.jpg` through `door-15.jpg`. Every puppy now has its own unique real photo with zero duplicates.
 7. Lint and build verified cleanly (`next build` generated 27/27 static pages with 0 warnings/errors).
+
+
+## SEO Metadata, Canonical Base, Title Deduplication & Footer Email
+**Date:** 2026-11-25  
+**Prompt:**
+```
+Fix SEO metadata: set metadataBase and canonical to https://teddypups-clone-eta.vercel.app,
+remove the duplicated brand name from page titles, and make the meta description use only
+text from the original site. Update the footer email to match the original or mark it as
+a placeholder in docs/DECISIONS.md. Log this prompt, commit, and push.
+```
+
+**Summary:**
+1. **MetadataBase & Canonical**: Updated `siteConfig.url` to `https://teddypups-clone-eta.vercel.app`. Set `metadataBase: new URL('https://teddypups-clone-eta.vercel.app')` and `alternates: { canonical: ... }` across `layout.tsx`, `page.tsx`, and all subroutes (`/puppies`, `/happy-families`, `/how-it-works`, `/faq`, `/contact`, `/gone-home`, `/puppies/[slug]`), matching `sitemap.ts` and `robots.ts`.
+2. **Title Deduplication**: Standardized page titles across all routes (e.g. `Puppies`, `Happy Families`, `How It Works`, `FAQ`, `Visit & Contact`, `Gone Home`) so the layout title template `%s | TeddyPups U.A.E.` produces clean, single-brand titles (`Puppies | TeddyPups U.A.E.`) without redundant brand doubling.
+3. **Meta Description**: Replaced invented descriptions with verbatim copy from the original site index metadata: `"Teddy bear and teacup puppies in Dubai. Meet local puppies in our Downtown Dubai showroom or bring home a rare breed imported from trusted breeders."`
+4. **Footer Email**: Decoded authentic contact email `info@instabizweb.com` from the reference Cloudflare email protection link (`data-cfemail="a7cec9c1c8e7cec9d4d3c6c5ceddd0c2c589c4c8ca"`), set `siteConfig.email = 'info@instabizweb.com'`, and documented reference origin and placeholder handling in `docs/DECISIONS.md`.
+5. **Validation**: Ran `npm run lint` and `npm run build` (27/27 static pages generated with 0 errors/warnings). Committed and pushed to `origin/main`.

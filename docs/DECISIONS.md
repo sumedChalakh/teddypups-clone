@@ -86,3 +86,15 @@
 - **Choice:** Extracted keyframe bitmaps directly from the 1080p recording using OpenCV, segmented them into dedicated components (`hero-pup-*`, `meet-pup-*`, `family-*`, `airplane-pup`, `mascot-*`), and loaded them via Next.js `next/image` with responsive sizing.
 - **Alternatives Considered:** Keeping synthetic SVG drawings (less authentic; fails to match user recording visual fidelity).
 - **Trade-off:** Minimal raster footprint with maximum visual fidelity and authentic presentation value for Loom walkthrough.
+
+## 16. SEO Metadata, Canonical Base & Footer Contact Email
+- **Context:** The site required accurate SEO metadata alignment matching the production deployment URL (`https://teddypups-clone-eta.vercel.app`), deduplicated brand titles across all routes, authentic meta descriptions strictly from the reference copy, and genuine footer email alignment.
+- **Decisions**:
+  1. **MetadataBase & Canonical**: Explicitly configured `metadataBase: new URL('https://teddypups-clone-eta.vercel.app')` and `alternates: { canonical: ... }` across `layout.tsx`, `page.tsx`, and all subroutes (`/puppies`, `/happy-families`, `/how-it-works`, `/faq`, `/contact`, `/gone-home`, `/puppies/[slug]`), matching `sitemap.ts` and `robots.ts`.
+  2. **Title Deduplication**: Standardized `layout.tsx` title template to `%s | TeddyPups U.A.E.` and removed redundant hardcoded `| TeddyPups U.A.E.` suffixes from individual page titles. This ensures clean, non-duplicated browser tabs (e.g. `Puppies | TeddyPups U.A.E.` instead of `Puppies | TeddyPups U.A.E. | TeddyPups U.A.E.`).
+  3. **Meta Description**: Replaced invented placeholder copy with the exact meta description from the original site's index HTML: `"Teddy bear and teacup puppies in Dubai. Meet local puppies in our Downtown Dubai showroom or bring home a rare breed imported from trusted breeders."`
+  4. **Footer Email (`info@instabizweb.com`)**:
+     - Decoded directly from the original site's Cloudflare email obfuscation anchor (`data-cfemail="a7cec9c1c8e7cec9d4d3c6c5ceddd0c2c589c4c8ca"` -> `info@instabizweb.com`).
+     - Set `siteConfig.email = 'info@instabizweb.com'` to mirror the original site 1:1.
+     - **Placeholder Note**: In a production white-label or customer deployment, this value can be overridden via environment variable (`NEXT_PUBLIC_CONTACT_EMAIL`) or updated in `src/config/site.ts` to route inquiries to an operational business mailbox.
+

@@ -5,9 +5,12 @@ import { PawIcon } from '@/components/ui/PawIcon';
 import { ContactForm } from '@/components/contact/ContactForm';
 
 export const metadata: Metadata = {
-  title: 'Visit & Contact Our Dubai Showroom | TeddyPups U.A.E.',
+  title: 'Visit & Contact',
   description:
     'Visit TeddyPups in Downtown Dubai to meet our ethically raised teacup puppies. View showroom location, opening hours, and direct WhatsApp contact details.',
+  alternates: {
+    canonical: 'https://teddypups-clone-eta.vercel.app/contact',
+  },
 };
 
 export default function ContactPage() {
