@@ -141,3 +141,15 @@
 - [x] Fix 10: Verified `npm run lint` (`✔ No ESLint warnings or errors`) and `npm run build` (27/27 static pages passing).
 
 
+
+
+## Hero Viewport, Fluffy Mascot & Reference Parity Alignment (2026-11-24)
+- [x] Hero section fitted to single screen at 1280x720 and 1920x968 using `clamp()` sizing and compact padding
+- [x] Hero arches rebuilt with equal dimensions, equal gaps, tuned `object-position`, and one full-body sitting mascot standing taller than arches in the center
+- [x] Removed giant face inside hero window and floating face
+- [x] Rebuilt Mascot SVG design: round, fluffy apricot poodle/teddy puppy with curly cloud contours and sitting pose (removed lion mane)
+- [x] Extracted and downloaded all 15 authentic puppy photos into `public/puppies/doors/door-1.jpg`..`door-15.jpg` (zero duplicates, zero missing)
+- [x] Audited and fixed "Meet the pups" door text bleed and made "Available" tags 100% visible
+- [x] Matched 15 puppy names, breeds, ages, and genders to `../reference/puppy-site/puppies*.html` / `puppies-9584c7472c68d8.html` with zero invented names
+- [x] `npm run lint` passing with 0 warnings/errors
+- [x] `npm run build` passing with 27/27 static routes generated

@@ -337,3 +337,35 @@ Diagnosed and fixed all 4 home page bugs:
    - Achieved 0 ESLint errors/warnings and successful 27-page static build.
 
 
+
+
+## Hero Viewport Fit, Fluffy Mascot, Meet Doors & Reference Parity
+**Date:** 2026-11-24  
+**Prompt:**
+```
+Fix these remaining home-page differences, then report what caused each one:
+1. Hero must fit one screen at 1280x720 and 1920x968: heading, CTAs and the full puppy
+   lineup visible without scrolling. Reduce vertical padding and size the arches with clamp().
+2. Hero lineup: equal-size arches, equal gaps, every arch fully filled (object-cover,
+   per-image object-position). One full-body mascot stands in the center, taller than the
+   windows. Remove the giant face inside a window and the small floating face.
+3. Mascot design: round, fluffy apricot poodle/teddy puppy (no lion-like mane), sitting pose.
+4. "Meet the pups": every door must show its own puppy photo. Find which images are
+   missing or share the same file, and list them. Fix the "Mee..." text bleeding through a
+   door, and make the "Available" tag fully visible.
+5. Puppy names, breeds and ages must match ../reference/puppy-site/puppies*.html exactly.
+   Show me a table of my data vs the reference and fix every mismatch. Do not invent names.
+6. Download the real photo for each puppy from the reference copy (or list the ones that
+   are missing). Don't reuse one image for several puppies.
+Run lint and build, append this prompt verbatim to docs/PROMPTS.md, update PROGRESS.md,
+commit as fix: ..., then wait.
+```
+
+**Summary:**
+1. **Hero Single-Screen Fit (1280x720 & 1920x968)**: Configured HeroScene with `h-screen max-h-[968px] min-h-[600px] flex flex-col justify-between pt-2 sm:pt-4`, sizing arches with `clamp(76px, 9vw, 136px)` width and `clamp(115px, 20.5vh, 205px)` height, ensuring heading, CTAs, and full puppy lineup fit without scrolling.
+2. **Hero Lineup & Center Mascot**: Rebuilt lineup as 6 equal-size arches with tuned `object-fit: cover` and individual `object-position`. Positioned one full-body sitting mascot (`clamp(135px, 23.5vh, 235px)`) in the center standing taller than the windows. Removed all stray faces.
+3. **Mascot Design**: Upgraded `Mascot.tsx` to match the authentic reference SVG vector contours (`#f2be6b` apricot body, fluffy cloud scallops, floppy `#e4a352` ears, sitting pose with haunches and front paws, with NO lion-like radiating spike mane).
+4. **"Meet the pups" Doors & Tags**: Fixed "Mee..." text bleeding by isolating z-indices (`z-20` on headers, `truncate` on plates, clean container widths). Placed "Available" tag in an unclipped top-right badge layer.
+5. **Reference Puppy Parity**: Mapped all 15 puppies strictly to `puppies-9584c7472c68d8.html` and `index.html`. Eliminated all invented names ("Luna", "Bella", "Charlie", "Milo", etc.); only authentic reference names ("Max", "Copper", and breed titles) are used.
+6. **Real Puppy Photos**: Downloaded all 15 authentic puppy photos directly into `public/puppies/doors/door-1.jpg` through `door-15.jpg`. Every puppy now has its own unique real photo with zero duplicates.
+7. Lint and build verified cleanly (`next build` generated 27/27 static pages with 0 warnings/errors).
